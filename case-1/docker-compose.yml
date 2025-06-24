@@ -1,5 +1,4 @@
 version: '3.8'
-
 services:
   ray-head:
     image: rayproject/ray:latest
@@ -32,9 +31,9 @@ services:
     networks:
       - ray-network
 
-  ray-worker-gpu:
+  ray-worker-gpu-1:
     image: rayproject/ray:latest-gpu
-    container_name: ray-worker-gpu
+    container_name: ray-worker-gpu-1
     command: >
       ray start
       --address=ray-head:10030
@@ -45,19 +44,19 @@ services:
       --temp-dir=/ray-temp
       --block
     ports:
-      - "10071:10071"  # Object manager (worker)
-      - "10072:10072"  # Node manager (worker)
+      - "10071:10071"  # Object manager
+      - "10072:10072"  # Node manager
       - "10075-10100:10075-10100"  # Worker ports
     deploy:
-       resources:
-         reservations:
-           devices:
-             - driver: nvidia
-               device_ids:
-                 - 0
-               capabilities: [gpu]
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids:
+                - "0"
+              capabilities: [gpu]
     environment:
-      - CUDA_VISIBLE_DEVICES=all
+      - CUDA_VISIBLE_DEVICES=0
       - RAY_DISABLE_IMPORT_WARNING=1
     volumes:
       - ./docker/ray-temp-worker-1:/ray-temp
