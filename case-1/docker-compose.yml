@@ -80,6 +80,11 @@ services:
             - driver: nvidia
               device_ids: ["1"]
               capabilities: [gpu]
+    depends_on:
+      - ray-head
+      - ray-worker-gpu-1
+    networks:
+      - ray-network
 
 volumes:
   ray_logs:
