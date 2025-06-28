@@ -13,7 +13,6 @@ services:
       --ray-client-server-port=10034
       --min-worker-port=10035
       --max-worker-port=10065
-      --temp-dir=/ray-head-temp
       --block
     ports:
       - "10030:10030" # GCS server
@@ -24,8 +23,6 @@ services:
       - "10035-10065:10035-10065" # Worker ports (head)
     environment:
       - RAY_DISABLE_IMPORT_WARNING=1
-    volumes:
-      - ./ray-head-temp:/ray-temp
     restart: unless-stopped
     networks:
       - ray-network
@@ -40,7 +37,6 @@ services:
       --node-manager-port=10072
       --min-worker-port=10075
       --max-worker-port=10100
-      --temp-dir=/ray-temp
       --block
     ports:
       - "10071:10071" # Object manager
@@ -56,8 +52,6 @@ services:
     environment:
       - CUDA_VISIBLE_DEVICES=0
       - RAY_DISABLE_IMPORT_WARNING=1
-    volumes:
-      - ./ray-temp-worker-1:/ray-temp
     restart: unless-stopped
     depends_on:
       - ray-head
@@ -70,16 +64,15 @@ services:
     command: >
       ray start
       --address=ray-head:10030
-      --object-manager-port=10081
-      --node-manager-port=10082
-      --min-worker-port=10105
-      --max-worker-port=10130
-      --temp-dir=/ray-temp
+      --object-manager-port=20081
+      --node-manager-port=20082
+      --min-worker-port=20000
+      --max-worker-port=20050
       --block
     ports:
-      - "10081:10081" # Object manager
-      - "10082:10082" # Node manager
-      - "10105-10130:10105-10130" # Worker ports
+      - "20081:20081" # Object manager
+      - "20082:20082" # Node manager
+      - "20000-20050:20000-20050" # Worker ports
     deploy:
       resources:
         reservations:
