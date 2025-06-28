@@ -16,12 +16,12 @@ services:
       --temp-dir=/ray-head-temp
       --block
     ports:
-      - "10030:10030"  # GCS server
-      - "10031:10031"  # Object manager
-      - "10032:10032"  # Node manager
-      - "10033:10033"  # Dashboard
-      - "10034:10034"  # Ray client server
-      - "10035-10065:10035-10065"  # Worker ports (head)
+      - "10030:10030" # GCS server
+      - "10031:10031" # Object manager
+      - "10032:10032" # Node manager
+      - "10033:10033" # Dashboard
+      - "10034:10034" # Ray client server
+      - "10035-10065:10035-10065" # Worker ports (head)
     environment:
       - RAY_DISABLE_IMPORT_WARNING=1
     volumes:
@@ -43,15 +43,15 @@ services:
       --temp-dir=/ray-temp
       --block
     ports:
-      - "10071:10071"  # Object manager
-      - "10072:10072"  # Node manager
-      - "10075-10100:10075-10100"  # Worker ports
+      - "10071:10071" # Object manager
+      - "10072:10072" # Node manager
+      - "10075-10100:10075-10100" # Worker ports
     deploy:
       resources:
         reservations:
           devices:
             - driver: nvidia
-              device_ids: ['0']
+              device_ids: ["0"]
               capabilities: [gpu]
     environment:
       - CUDA_VISIBLE_DEVICES=0
@@ -63,6 +63,30 @@ services:
       - ray-head
     networks:
       - ray-network
+
+  ray-worker-gpu-2:
+    image: rayproject/ray:latest-gpu
+    container_name: ray-worker-gpu-2
+    command: >
+      ray start
+      --address=ray-head:10030
+      --object-manager-port=10081
+      --node-manager-port=10082
+      --min-worker-port=10105
+      --max-worker-port=10130
+      --temp-dir=/ray-temp
+      --block
+    ports:
+      - "10081:10081" # Object manager
+      - "10082:10082" # Node manager
+      - "10105-10130:10105-10130" # Worker ports
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["1"]
+              capabilities: [gpu]
 
 volumes:
   ray_logs:
