@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   ray-head:
     image: rayproject/ray:latest
@@ -14,7 +13,7 @@ services:
       --ray-client-server-port=10034
       --min-worker-port=10035
       --max-worker-port=10065
-      --temp-dir=/ray-temp
+      --temp-dir=/ray-head-temp
       --block
     ports:
       - "10030:10030"  # GCS server
@@ -26,7 +25,7 @@ services:
     environment:
       - RAY_DISABLE_IMPORT_WARNING=1
     volumes:
-      - ./docker/ray-temp:/ray-temp
+      - ./ray-head-temp:/ray-temp
     restart: unless-stopped
     networks:
       - ray-network
@@ -52,14 +51,13 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              device_ids:
-                - "0"
+              device_ids: ['0']
               capabilities: [gpu]
     environment:
       - CUDA_VISIBLE_DEVICES=0
       - RAY_DISABLE_IMPORT_WARNING=1
     volumes:
-      - ./docker/ray-temp-worker-1:/ray-temp
+      - ./ray-temp-worker-1:/ray-temp
     restart: unless-stopped
     depends_on:
       - ray-head
