@@ -1,0 +1,19 @@
+applications:
+  - name: vllm-gpt2
+    route_prefix: /
+    import_path: vllm.entrypoints.openai.api_server:app
+    deployments:
+      - name: VLLMDeployment
+        num_replicas: 1
+        ray_actor_options:
+          num_gpus: 2  # 4 * 2 = 8 total GPUs
+          num_cpus: 4
+          placement_group_strategy: "STRICT_PACK"
+        runtime_env:
+          env_vars:
+            MODEL_NAME: "gpt2"
+            TENSOR_PARALLEL_SIZE: "1"
+            PIPELINE_PARALLEL_SIZE: "2"
+            DISTRIBUTED_EXECUTOR_BACKEND: "ray"
+            WORKER_USE_RAY: "true"
+            ENGINE_USE_RAY: "true"
