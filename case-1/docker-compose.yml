@@ -4,23 +4,12 @@ services:
     container_name: ray-head
     command: >
       ray start --head
-      --node-ip-address=0.0.0.0
-      --port=10030
-      --object-manager-port=10031
-      --node-manager-port=10032
       --dashboard-host=0.0.0.0
-      --dashboard-port=10033
-      --ray-client-server-port=10034
-      --min-worker-port=10035
-      --max-worker-port=10065
       --block
     ports:
-      - "10030:10030" # GCS server
-      - "10031:10031" # Object manager
-      - "10032:10032" # Node manager
-      - "10033:10033" # Dashboard
-      - "10034:10034" # Ray client server
-      - "10035-10065:10035-10065" # Worker ports (head)
+      - "8080:8080" # API server
+      - "6379:6379" # Ray head node
+      - "8265:8265" # Ray dashboard
     environment:
       - RAY_DISABLE_IMPORT_WARNING=1
     restart: unless-stopped
@@ -32,16 +21,8 @@ services:
     container_name: ray-worker-gpu-1
     command: >
       ray start
-      --address=ray-head:10030
-      --object-manager-port=10071
-      --node-manager-port=10072
-      --min-worker-port=10075
-      --max-worker-port=10100
+      --address=ray-head:6379
       --block
-    ports:
-      - "10071:10071" # Object manager
-      - "10072:10072" # Node manager
-      - "10075-10100:10075-10100" # Worker ports
     deploy:
       resources:
         reservations:
@@ -63,16 +44,8 @@ services:
     container_name: ray-worker-gpu-2
     command: >
       ray start
-      --address=ray-head:10030
-      --object-manager-port=20081
-      --node-manager-port=20082
-      --min-worker-port=20000
-      --max-worker-port=20050
+      --address=ray-head:6379
       --block
-    ports:
-      - "20081:20081" # Object manager
-      - "20082:20082" # Node manager
-      - "20000-20050:20000-20050" # Worker ports
     deploy:
       resources:
         reservations:
