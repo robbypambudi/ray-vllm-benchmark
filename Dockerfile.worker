@@ -1,0 +1,19 @@
+# Gunakan base image Ray standar (tanpa GPU)
+FROM rayproject/ray:latest
+
+# Atur workdir
+WORKDIR /app
+
+# Install uv
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
+
+# Install dependensi tambahan untuk head node (jika diperlukan)
+RUN uv pip install --system \
+    prometheus-client \
+    psutil \
+    vllm
+
+# (Opsional) expose ports untuk Ray services
+EXPOSE 6379 8265 8080
+
+CMD ["bash"]

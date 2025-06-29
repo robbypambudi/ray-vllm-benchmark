@@ -1,28 +1,35 @@
 services:
   ray-head:
-    image: rayproject/ray:latest
+    image: robbypambudi/ray-head:latest
     container_name: ray-head
     command: >
       ray start --head
       --dashboard-host=0.0.0.0
+      --metrics-export-port=8080
       --block
     ports:
-      - "8080:8080" # API server
+      - "8080:8080" # Metrics export port
       - "6379:6379" # Ray head node
       - "8265:8265" # Ray dashboard
+    shm_size: '12gb'
     environment:
       - RAY_DISABLE_IMPORT_WARNING=1
+      - RAY_PROMETHEUS_HOST=0.0.0.0
+      - RAY_PROMETHEUS_PORT=8080
     restart: unless-stopped
     networks:
       - ray-network
 
   ray-worker-gpu-1:
-    image: rayproject/ray:latest-gpu
+    image: robbypambudi/ray-worker-vllm:latest
     container_name: ray-worker-gpu-1
     command: >
       ray start
       --address=ray-head:6379
+      --metrics-export-port=8081
       --block
+    ports:
+      - "8081:8081" # Metrics export port for worker
     deploy:
       resources:
         reservations:
@@ -30,37 +37,76 @@ services:
             - driver: nvidia
               device_ids: ["0"]
               capabilities: [gpu]
+    shm_size: '12gb'
     environment:
-      - CUDA_VISIBLE_DEVICES=0
       - RAY_DISABLE_IMPORT_WARNING=1
+      - RAY_PROMETHEUS_HOST=0.0.0.0
+      - RAY_PROMETHEUS_PORT=8081
     restart: unless-stopped
     depends_on:
       - ray-head
     networks:
       - ray-network
 
-  ray-worker-gpu-2:
-    image: rayproject/ray:latest-gpu
-    container_name: ray-worker-gpu-2
-    command: >
-      ray start
-      --address=ray-head:6379
-      --block
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              device_ids: ["1"]
-              capabilities: [gpu]
-    depends_on:
-      - ray-head
-      - ray-worker-gpu-1
+  #  ray-worker-gpu-2:
+  #    image: rayproject/ray:latest-gpu
+  #    container_name: ray-worker-gpu-2
+  #    command: >
+  #      ray start
+  #      --address=ray-head:6379
+  #      --metrics-export-port=8082
+  #      --block
+  #    ports:
+  #      - "8082:8082" # Metrics export port for worker 2
+  #    deploy:
+  #      resources:
+  #        reservations:
+  #          devices:
+  #            - driver: nvidia
+  #              device_ids: ["1"]
+  #              capabilities: [gpu]
+  #    depends_on:
+  #      - ray-head
+  #      - ray-worker-gpu-1
+  #    shm_size: '12gb'
+  #    environment:
+  #      - RAY_PROMETHEUS_HOST=0.0.0.0
+  #      - RAY_PROMETHEUS_PORT=8082
+  #    networks:
+  #      - ray-network
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: ray-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    restart: unless-stopped
+    networks:
+      - ray-network
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: ray-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana-storage:/var/lib/grafana
+    restart: unless-stopped
     networks:
       - ray-network
 
 volumes:
-  ray_logs:
+  grafana-storage:
 
 networks:
   ray-network:

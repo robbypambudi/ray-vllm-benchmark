@@ -1,0 +1,23 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'ray-head'
+    static_configs:
+      - targets: ['ray-head:8080']
+    metrics_path: '/metrics'
+    scrape_interval: 5s
+
+  - job_name: 'ray-worker-gpu-1'
+    static_configs:
+      - targets: ['ray-worker-gpu-1:8081']
+    metrics_path: '/metrics'
+    scrape_interval: 5s
+
+  # Uncomment when you enable the second worker
+  # - job_name: 'ray-worker-gpu-2'
+  #   static_configs:
+  #     - targets: ['ray-worker-gpu-2:8082']
+  #   metrics_path: '/metrics'
+  #   scrape_interval: 5s
