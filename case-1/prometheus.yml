@@ -16,8 +16,8 @@ scrape_configs:
     scrape_interval: 5s
 
   # Uncomment when you enable the second worker
-  # - job_name: 'ray-worker-gpu-2'
-  #   static_configs:
-  #     - targets: ['ray-worker-gpu-2:8082']
-  #   metrics_path: '/metrics'
-  #   scrape_interval: 5s
+  - job_name: 'ray-worker-gpu-2'
+    static_configs:
+      - targets: ['ray-worker-gpu-2:8082']
+    metrics_path: '/metrics'
+    scrape_interval: 5s

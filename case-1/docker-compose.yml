@@ -11,7 +11,7 @@ services:
       - "8080:8080" # Metrics export port
       - "6379:6379" # Ray head node
       - "8265:8265" # Ray dashboard
-    shm_size: '12gb'
+    shm_size: "12gb"
     environment:
       - RAY_DISABLE_IMPORT_WARNING=1
       - RAY_PROMETHEUS_HOST=0.0.0.0
@@ -37,7 +37,7 @@ services:
             - driver: nvidia
               device_ids: ["0"]
               capabilities: [gpu]
-    shm_size: '12gb'
+    shm_size: "12gb"
     environment:
       - RAY_DISABLE_IMPORT_WARNING=1
       - RAY_PROMETHEUS_HOST=0.0.0.0
@@ -48,32 +48,32 @@ services:
     networks:
       - ray-network
 
-  #  ray-worker-gpu-2:
-  #    image: rayproject/ray:latest-gpu
-  #    container_name: ray-worker-gpu-2
-  #    command: >
-  #      ray start
-  #      --address=ray-head:6379
-  #      --metrics-export-port=8082
-  #      --block
-  #    ports:
-  #      - "8082:8082" # Metrics export port for worker 2
-  #    deploy:
-  #      resources:
-  #        reservations:
-  #          devices:
-  #            - driver: nvidia
-  #              device_ids: ["1"]
-  #              capabilities: [gpu]
-  #    depends_on:
-  #      - ray-head
-  #      - ray-worker-gpu-1
-  #    shm_size: '12gb'
-  #    environment:
-  #      - RAY_PROMETHEUS_HOST=0.0.0.0
-  #      - RAY_PROMETHEUS_PORT=8082
-  #    networks:
-  #      - ray-network
+  ray-worker-gpu-2:
+    image: robbypambudi/ray-worker-vllm:latest
+    container_name: ray-worker-gpu-2
+    command: >
+      ray start
+      --address=ray-head:6379
+      --metrics-export-port=8082
+      --block
+    ports:
+      - "8082:8082" # Metrics export port for worker 2
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["1"]
+              capabilities: [gpu]
+    depends_on:
+      - ray-head
+      - ray-worker-gpu-1
+    shm_size: "12gb"
+    environment:
+      - RAY_PROMETHEUS_HOST=0.0.0.0
+      - RAY_PROMETHEUS_PORT=8082
+    networks:
+      - ray-network
 
   prometheus:
     image: prom/prometheus:latest
@@ -83,11 +83,11 @@ services:
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
     command:
-      - '--config.file=/etc/prometheus/prometheus.yml'
-      - '--storage.tsdb.path=/prometheus'
-      - '--web.console.libraries=/etc/prometheus/console_libraries'
-      - '--web.console.templates=/etc/prometheus/consoles'
-      - '--web.enable-lifecycle'
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+      - "--web.console.libraries=/etc/prometheus/console_libraries"
+      - "--web.console.templates=/etc/prometheus/consoles"
+      - "--web.enable-lifecycle"
     restart: unless-stopped
     networks:
       - ray-network
