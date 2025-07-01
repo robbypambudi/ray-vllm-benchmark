@@ -17,15 +17,13 @@ from ray.util.scheduling_strategies import PlacementGroupSchedulingStrategy
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 logger = logging.getLogger(__name__)
 
+# Option 1: Use placement group bundles (Recommended)    
 @serve.deployment(
-    name="vllm-model",
+    name="vllm-model-v3",
     num_replicas=1,
-    # Use placement_group_bundles instead of ray_actor_options for GPU placement
-    placement_group_bundles=[
-        {"CPU": 1, "GPU": 1},  # Main replica bundle with GPU
-        {"CPU": 2}             # Additional CPU bundle for vLLM workers
-    ],
-    placement_group_strategy="STRICT_PACK"  # Keep all bundles on same node
+    ray_actor_options={
+        "resources": {"worker": 1, "worker": 1},
+    },
 )
 class VLLMModelDeployment:
     """vLLM Model Deployment dengan proper GPU placement strategy"""
