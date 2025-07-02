@@ -1,6 +1,6 @@
 services:
   ray-head:
-    image: robbypambudi/ray-head:latest
+    image: robbypambudi/ray-worker-vllm:latest
     container_name: ray-head
     command: >
       ray start --head
@@ -12,6 +12,13 @@ services:
       - "6379:6379" # Ray head node
       - "8265:8265" # Ray dashboard
     shm_size: "12gb"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["0"]
+              capabilities: [gpu]
     environment:
       - RAY_DISABLE_IMPORT_WARNING=1
       - RAY_PROMETHEUS_HOST=0.0.0.0
@@ -36,7 +43,7 @@ services:
         reservations:
           devices:
             - driver: nvidia
-              device_ids: ["0"]
+              device_ids: ["1"]
               capabilities: [gpu]
     shm_size: "12gb"
     environment:
@@ -49,33 +56,33 @@ services:
     networks:
       - ray-network
 
-  ray-worker-gpu-2:
-    image: robbypambudi/ray-worker-vllm:latest
-    container_name: ray-worker-gpu-2
-    command: >
-      ray start
-      --address=ray-head:6379
-      --metrics-export-port=8082
-      --resources='{"worker": 1}'
-      --block
-    ports:
-      - "8082:8082" # Metrics export port for worker 2
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              device_ids: ["1"]
-              capabilities: [gpu]
-    depends_on:
-      - ray-head
-      - ray-worker-gpu-1
-    shm_size: "12gb"
-    environment:
-      - RAY_PROMETHEUS_HOST=0.0.0.0
-      - RAY_PROMETHEUS_PORT=8082
-    networks:
-      - ray-network
+  # ray-worker-gpu-2:
+  #   image: robbypambudi/ray-worker-vllm:latest
+  #   container_name: ray-worker-gpu-2
+  #   command: >
+  #     ray start
+  #     --address=ray-head:6379
+  #     --metrics-export-port=8082
+  #     --resources='{"worker": 1}'
+  #     --block
+  #   ports:
+  #     - "8082:8082" # Metrics export port for worker 2
+  #   deploy:
+  #     resources:
+  #       reservations:
+  #         devices:
+  #           - driver: nvidia
+  #             device_ids: ["1"]
+  #             capabilities: [gpu]
+  #   depends_on:
+  #     - ray-head
+  #     - ray-worker-gpu-1
+  #   shm_size: "12gb"
+  #   environment:
+  #     - RAY_PROMETHEUS_HOST=0.0.0.0
+  #     - RAY_PROMETHEUS_PORT=8082
+  #   networks:
+  #     - ray-network
 
   prometheus:
     image: prom/prometheus:latest
