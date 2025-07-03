@@ -1,0 +1,2769 @@
+{
+  "evaluation_timestamp": 1751495021.0743122,
+  "ray_cluster_address": "auto-detected",
+  "deployment_info": {
+    "model_name": "Qwen/Qwen2.5-7B-Instruct",
+    "max_model_len": 2048,
+    "ray_address": null,
+    "deployment_time": 1751494837.7006009,
+    "status": "deployed"
+  },
+  "cluster_info": {
+    "cluster_resources": {
+      "node:172.18.0.3": 1.0,
+      "CPU": 8.0,
+      "memory": 11025533748.0,
+      "GPU": 2.0,
+      "object_store_memory": 4725228748.0,
+      "accelerator_type:G": 1.0,
+      "node:__internal_head__": 1.0
+    },
+    "available_resources": {
+      "object_store_memory": 4725228748.0,
+      "node:__internal_head__": 0.999,
+      "memory": 11025533748.0,
+      "GPU": 2.0,
+      "node:172.18.0.3": 1.0,
+      "accelerator_type:G": 1.0,
+      "CPU": 7.0
+    },
+    "nodes": 1
+  },
+  "gpu_count": 2,
+  "gpu_info": [
+    {
+      "id": 0,
+      "name": "NVIDIA GeForce RTX 4090",
+      "total_memory": 24564.0,
+      "driver": "570.158.01",
+      "uuid": "GPU-b654b3b5-e131-a373-afad-85e6bfeced36"
+    },
+    {
+      "id": 1,
+      "name": "NVIDIA GeForce RTX 4090",
+      "total_memory": 24564.0,
+      "driver": "570.158.01",
+      "uuid": "GPU-3218848a-ac35-31d4-17dc-f401191dc377"
+    }
+  ],
+  "total_prompts": 10,
+  "category_analysis": {
+    "short_text": {
+      "count": 2,
+      "avg_time": 1.9193265835444133,
+      "std_time": 0.000944972038269043,
+      "avg_throughput": 58.210821082068925,
+      "std_throughput": 3.6876849572924613,
+      "avg_word_count": 86.33333333333334,
+      "std_word_count": 5.333333333333336,
+      "avg_tokens": 111.66666666666667,
+      "std_tokens": 7.0
+    },
+    "long_text": {
+      "count": 2,
+      "avg_time": 1.9188991785049438,
+      "std_time": 0.040934840838114495,
+      "avg_throughput": 55.95356036426375,
+      "std_throughput": 0.4776422542028378,
+      "avg_word_count": 83.0,
+      "std_word_count": 1.0,
+      "avg_tokens": 107.33333333333334,
+      "std_tokens": 1.3333333333333357
+    },
+    "creative": {
+      "count": 2,
+      "avg_time": 1.8738664388656616,
+      "std_time": 0.019816915194193596,
+      "avg_throughput": 54.169899362610714,
+      "std_throughput": 4.94991632212799,
+      "avg_word_count": 78.33333333333334,
+      "std_word_count": 6.333333333333336,
+      "avg_tokens": 101.33333333333334,
+      "std_tokens": 8.333333333333336
+    },
+    "technical": {
+      "count": 2,
+      "avg_time": 1.8917219241460164,
+      "std_time": 0.0035289525985717773,
+      "avg_throughput": 55.355281858632196,
+      "std_throughput": 0.4364558080950509,
+      "avg_word_count": 80.83333333333333,
+      "std_word_count": 0.5,
+      "avg_tokens": 104.5,
+      "std_tokens": 0.8333333333333286
+    },
+    "reasoning": {
+      "count": 2,
+      "avg_time": 1.9292160272598267,
+      "std_time": 0.011677384376525879,
+      "avg_throughput": 46.707993184775944,
+      "std_throughput": 4.052738680231318,
+      "avg_word_count": 69.5,
+      "std_word_count": 6.5,
+      "avg_tokens": 90.0,
+      "std_tokens": 8.333333333333329
+    }
+  },
+  "results": [
+    {
+      "prompt": "What is AI?",
+      "prompt_category": "short_text",
+      "iterations": 3,
+      "avg_total_time": 1.9202715555826824,
+      "avg_throughput": 54.523136124776464,
+      "avg_prompt_tokens": 3.0,
+      "avg_completion_tokens": 104.66666666666667,
+      "avg_client_cpu": 41.083333333333336,
+      "avg_client_ram": 54.70000000000001,
+      "avg_client_gpu": 57.583333333333336,
+      "avg_client_gpu_mem": 81.33447321283178,
+      "std_total_time": 0.012811856106806461,
+      "std_throughput": 2.6943724550394355,
+      "avg_response_analysis": {
+        "avg_word_count": 81.0,
+        "avg_sentence_count": 4.333333333333333,
+        "avg_character_count": 554.3333333333334,
+        "avg_words_per_sentence": 18.816666666666666,
+        "dominant_length_category": "medium"
+      },
+      "detailed_results": [
+        {
+          "prompt": "What is AI?",
+          "prompt_category": "short_text",
+          "response": " Artificial Intelligence (AI) is the simulation of human intelligence in machines that are programmed to think and learn like humans. The goal of AI is to create software and systems that can perform tasks that would normally require human intelligence, such as visual perception, speech recognition, decision-making, and language translation.\nAI can be classified into two main categories: narrow or weak AI and general or strong AI. Narrow AI is designed to perform a specific task, such as image recognition or language translation. General AI, on",
+          "response_analysis": {
+            "word_count": 86,
+            "sentence_count": 5,
+            "paragraph_count": 1,
+            "avg_words_per_sentence": 17.2,
+            "character_count": 550,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.902951717376709,
+          "prompt_tokens": 3,
+          "completion_tokens": 111,
+          "total_tokens": 115,
+          "throughput": 58.33043423351681,
+          "tokens_per_second": 58.33043423351681,
+          "client_cpu_usage": 43.25,
+          "client_ram_usage": 54.9,
+          "client_gpu_usage": 68.5,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494943.2715328,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 47.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 87.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 54.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 45.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 86.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 41.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "What is AI?",
+          "prompt_category": "short_text",
+          "response": " (Artificial Intelligence)\nAI stands for artificial intelligence, which is the development of computer systems that can perform tasks that typically require human intelligence, such as visual perception, speech recognition, decision-making, and language translation.\nAI systems can be designed to perform a wide range of tasks, from simple repetitive tasks to more complex tasks that require reasoning, problem-solving, and learning from experience. AI can be applied to a variety of fields, including healthcare, finance, transportation, manufacturing, and entertainment.\nAI can",
+          "response_analysis": {
+            "word_count": 79,
+            "sentence_count": 4,
+            "paragraph_count": 1,
+            "avg_words_per_sentence": 19.75,
+            "character_count": 579,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.9335393905639648,
+          "prompt_tokens": 3,
+          "completion_tokens": 102,
+          "total_tokens": 106,
+          "throughput": 52.752998205146035,
+          "tokens_per_second": 52.752998205146035,
+          "client_cpu_usage": 40.1,
+          "client_ram_usage": 54.650000000000006,
+          "client_gpu_usage": 32.5,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494945.8021698,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 42.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 38.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 42.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 45.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 88.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 41.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "What is AI?",
+          "prompt_category": "short_text",
+          "response": " (Artificial Intelligence)\n\nIn this video, you will learn about the history of artificial intelligence, how it works, and what it can do.\n\nArtificial Intelligence, or AI, is the simulation of human intelligence processes by computer systems.\n\nThe term Artificial Intelligence was first coined in 1956 by John McCarthy, a computer scientist and researcher at Dartmouth College, and members of the Dartmouth Summer Research Project on Artificial Intelligence.\n\nArtificial Intelligence can be broken down into two main categories: narrow",
+          "response_analysis": {
+            "word_count": 78,
+            "sentence_count": 4,
+            "paragraph_count": 5,
+            "avg_words_per_sentence": 19.5,
+            "character_count": 534,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.924323558807373,
+          "prompt_tokens": 3,
+          "completion_tokens": 101,
+          "total_tokens": 105,
+          "throughput": 52.48597593566655,
+          "tokens_per_second": 52.48597593566655,
+          "client_cpu_usage": 39.900000000000006,
+          "client_ram_usage": 54.55,
+          "client_gpu_usage": 71.75,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494948.3422477,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 49.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 88.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 38.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 63.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 46.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 87.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 42.0
+            }
+          ],
+          "gpu_count": 2
+        }
+      ],
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "gpu_count": 2,
+      "individual_gpu_metrics": [
+        {
+          "gpu_id": 0,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 42.5,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 44.166666666666664,
+          "std_gpu_load": 20.089383597645135,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        },
+        {
+          "gpu_id": 1,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 72.66666666666667,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 40.0,
+          "std_gpu_load": 32.504700514780254,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        }
+      ],
+      "gpu_info": [
+        {
+          "id": 0,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-b654b3b5-e131-a373-afad-85e6bfeced36"
+        },
+        {
+          "id": 1,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-3218848a-ac35-31d4-17dc-f401191dc377"
+        }
+      ]
+    },
+    {
+      "prompt": "Define machine learning.",
+      "prompt_category": "short_text",
+      "iterations": 3,
+      "avg_total_time": 1.9183816115061443,
+      "avg_throughput": 61.898506039361386,
+      "avg_prompt_tokens": 3.0,
+      "avg_completion_tokens": 118.66666666666667,
+      "avg_client_cpu": 40.300000000000004,
+      "avg_client_ram": 54.31666666666666,
+      "avg_client_gpu": 38.0,
+      "avg_client_gpu_mem": 81.33447321283178,
+      "std_total_time": 0.04411337754109192,
+      "std_throughput": 1.8102524593564744,
+      "avg_response_analysis": {
+        "avg_word_count": 91.66666666666667,
+        "avg_sentence_count": 4.0,
+        "avg_character_count": 609.3333333333334,
+        "avg_words_per_sentence": 22.916666666666668,
+        "dominant_length_category": "medium"
+      },
+      "detailed_results": [
+        {
+          "prompt": "Define machine learning.",
+          "prompt_category": "short_text",
+          "response": " Machine learning is a subset of artificial intelligence (AI) that involves the development of algorithms and statistical models that enable computer systems to improve their performance on a specific task through experience, without being explicitly programmed. The core idea is to allow computers to learn from data, identify patterns, and make decisions or predictions based on that learning. This process typically involves feeding large amounts of data into a model, which then adjusts its parameters to optimize its performance on a given task. Machine learning techniques are used in various applications",
+          "response_analysis": {
+            "word_count": 91,
+            "sentence_count": 4,
+            "paragraph_count": 1,
+            "avg_words_per_sentence": 22.75,
+            "character_count": 611,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.9777886867523193,
+          "prompt_tokens": 3,
+          "completion_tokens": 118,
+          "total_tokens": 122,
+          "throughput": 59.662592262960636,
+          "tokens_per_second": 59.662592262960636,
+          "client_cpu_usage": 39.55,
+          "client_ram_usage": 54.349999999999994,
+          "client_gpu_usage": 35.25,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494951.4150062,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 42.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 38.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 57.99999999999999,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 46.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 83.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 42.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Define machine learning.",
+          "prompt_category": "short_text",
+          "response": " Machine learning is a subset of artificial intelligence that focuses on building systems that can learn from and make predictions on data, without being explicitly programmed. It involves using algorithms and statistical models to identify patterns and make decisions or predictions based on data.\n\nIn simpler terms, machine learning allows computers to learn from experience and improve their performance on a specific task over time, without being explicitly programmed to do so. This is achieved by feeding the system large amounts of data and allowing it to learn from that data, identifying patterns",
+          "response_analysis": {
+            "word_count": 93,
+            "sentence_count": 4,
+            "paragraph_count": 2,
+            "avg_words_per_sentence": 23.25,
+            "character_count": 605,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.872183084487915,
+          "prompt_tokens": 3,
+          "completion_tokens": 120,
+          "total_tokens": 124,
+          "throughput": 64.09629538599467,
+          "tokens_per_second": 64.09629538599467,
+          "client_cpu_usage": 39.85,
+          "client_ram_usage": 54.3,
+          "client_gpu_usage": 47.5,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494953.8913627,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 57.99999999999999,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 84.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 42.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Define machine learning.",
+          "prompt_category": "short_text",
+          "response": " Machine learning is a subset of artificial intelligence that involves the development of algorithms and statistical models that enable computer systems to improve their performance in specific tasks through experience and learning from data, without being explicitly programmed. Essentially, it's a way for machines to learn from data, identify patterns, and make informed decisions or predictions based on that data, with the goal of improving accuracy and efficiency over time. This approach allows machines to learn and adapt to new situations without human intervention. Machine learning has a wide range of",
+          "response_analysis": {
+            "word_count": 91,
+            "sentence_count": 4,
+            "paragraph_count": 1,
+            "avg_words_per_sentence": 22.75,
+            "character_count": 612,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.9051730632781982,
+          "prompt_tokens": 3,
+          "completion_tokens": 118,
+          "total_tokens": 122,
+          "throughput": 61.93663046912885,
+          "tokens_per_second": 61.93663046912885,
+          "client_cpu_usage": 41.5,
+          "client_ram_usage": 54.3,
+          "client_gpu_usage": 31.25,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494956.3904018,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 39.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 86.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 42.0
+            }
+          ],
+          "gpu_count": 2
+        }
+      ],
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "gpu_count": 2,
+      "individual_gpu_metrics": [
+        {
+          "gpu_id": 0,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 33.833333333333336,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 44.833333333333336,
+          "std_gpu_load": 24.781825777954474,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        },
+        {
+          "gpu_id": 1,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 42.166666666666664,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 40.666666666666664,
+          "std_gpu_load": 42.17588831969702,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        }
+      ],
+      "gpu_info": [
+        {
+          "id": 0,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-b654b3b5-e131-a373-afad-85e6bfeced36"
+        },
+        {
+          "id": 1,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-3218848a-ac35-31d4-17dc-f401191dc377"
+        }
+      ]
+    },
+    {
+      "prompt": "Write a detailed explanation of how artificial intelligence works, including its history, current applications, and future prospects.",
+      "prompt_category": "long_text",
+      "iterations": 3,
+      "avg_total_time": 1.8779643376668294,
+      "avg_throughput": 56.431202618466585,
+      "avg_prompt_tokens": 22.0,
+      "avg_completion_tokens": 106.0,
+      "avg_client_cpu": 39.666666666666664,
+      "avg_client_ram": 54.416666666666664,
+      "avg_client_gpu": 51.5,
+      "avg_client_gpu_mem": 81.33447321283178,
+      "std_total_time": 0.01908239449290524,
+      "std_throughput": 3.1027827635191954,
+      "avg_response_analysis": {
+        "avg_word_count": 82.0,
+        "avg_sentence_count": 4.666666666666667,
+        "avg_character_count": 555.3333333333334,
+        "avg_words_per_sentence": 17.7,
+        "dominant_length_category": "medium"
+      },
+      "detailed_results": [
+        {
+          "prompt": "Write a detailed explanation of how artificial intelligence works, including its history, current applications, and future prospects.",
+          "prompt_category": "long_text",
+          "response": " Provide examples of how AI is being used in various industries and discuss potential ethical concerns associated with its development and use. Additionally, describe the different types of AI and their capabilities, such as machine learning, natural language processing, and computer vision. Use clear and concise language to ensure understanding for readers with varying levels of technical knowledge.\nArtificial Intelligence (AI) is a field of computer science that focuses on creating intelligent machines that can perform tasks that typically require human intelligence. AI has a rich history dating back",
+          "response_analysis": {
+            "word_count": 89,
+            "sentence_count": 5,
+            "paragraph_count": 1,
+            "avg_words_per_sentence": 17.8,
+            "character_count": 609,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.8940131664276123,
+          "prompt_tokens": 22,
+          "completion_tokens": 115,
+          "total_tokens": 137,
+          "throughput": 60.71763493434786,
+          "tokens_per_second": 60.71763493434786,
+          "client_cpu_usage": 39.3,
+          "client_ram_usage": 54.35,
+          "client_gpu_usage": 34.5,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494959.512561,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 39.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 49.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 89.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 41.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Write a detailed explanation of how artificial intelligence works, including its history, current applications, and future prospects.",
+          "prompt_category": "long_text",
+          "response": " Provide specific examples and technical details to support your explanation.\n\nArtificial intelligence (AI) is a broad field of computer science that focuses on creating intelligent machines that can perform tasks that typically require human intelligence. The history of AI dates back to the 1950s when researchers began exploring the possibility of creating machines that could think and learn like humans.\n\nOne of the earliest AI breakthroughs was the development of the logic programming language, Prolog, in the 1970s. This",
+          "response_analysis": {
+            "word_count": 79,
+            "sentence_count": 5,
+            "paragraph_count": 3,
+            "avg_words_per_sentence": 15.8,
+            "character_count": 528,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.8511507511138916,
+          "prompt_tokens": 22,
+          "completion_tokens": 102,
+          "total_tokens": 124,
+          "throughput": 55.10086087728059,
+          "tokens_per_second": 55.10086087728059,
+          "client_cpu_usage": 40.6,
+          "client_ram_usage": 54.5,
+          "client_gpu_usage": 54.25,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494961.9610312,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 89.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 39.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 80.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 42.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Write a detailed explanation of how artificial intelligence works, including its history, current applications, and future prospects.",
+          "prompt_category": "long_text",
+          "response": " Artificial intelligence (AI) is a field of computer science that focuses on creating intelligent machines that can perform tasks which typically require human intelligence, such as visual perception, speech recognition, decision-making, and language translation. AI has its roots in the 1950s when computer scientists first began exploring the possibility of building machines that could think and learn like humans.\n\nThe history of AI can be divided into several stages. The first stage, known as the \"rule-based\" or \"symbolic\"",
+          "response_analysis": {
+            "word_count": 78,
+            "sentence_count": 4,
+            "paragraph_count": 2,
+            "avg_words_per_sentence": 19.5,
+            "character_count": 529,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.8887290954589844,
+          "prompt_tokens": 22,
+          "completion_tokens": 101,
+          "total_tokens": 123,
+          "throughput": 53.4751120437713,
+          "tokens_per_second": 53.4751120437713,
+          "client_cpu_usage": 39.1,
+          "client_ram_usage": 54.4,
+          "client_gpu_usage": 65.75,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494964.4350965,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 80.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 46.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 87.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        }
+      ],
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "gpu_count": 2,
+      "individual_gpu_metrics": [
+        {
+          "gpu_id": 0,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 32.166666666666664,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 45.166666666666664,
+          "std_gpu_load": 22.74801578648613,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        },
+        {
+          "gpu_id": 1,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 70.83333333333333,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 40.666666666666664,
+          "std_gpu_load": 31.903064986855977,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        }
+      ],
+      "gpu_info": [
+        {
+          "id": 0,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-b654b3b5-e131-a373-afad-85e6bfeced36"
+        },
+        {
+          "id": 1,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-3218848a-ac35-31d4-17dc-f401191dc377"
+        }
+      ]
+    },
+    {
+      "prompt": "Explain the complete process of machine learning from data collection to model deployment, with examples.",
+      "prompt_category": "long_text",
+      "iterations": 3,
+      "avg_total_time": 1.9598340193430583,
+      "avg_throughput": 55.47591811006091,
+      "avg_prompt_tokens": 19.0,
+      "avg_completion_tokens": 108.66666666666667,
+      "avg_client_cpu": 39.53333333333333,
+      "avg_client_ram": 54.449999999999996,
+      "avg_client_gpu": 41.166666666666664,
+      "avg_client_gpu_mem": 81.33447321283178,
+      "std_total_time": 0.03257004902916654,
+      "std_throughput": 1.8083887303953536,
+      "avg_response_analysis": {
+        "avg_word_count": 84.0,
+        "avg_sentence_count": 5.333333333333333,
+        "avg_character_count": 553.0,
+        "avg_words_per_sentence": 15.855555555555554,
+        "dominant_length_category": "medium"
+      },
+      "detailed_results": [
+        {
+          "prompt": "Explain the complete process of machine learning from data collection to model deployment, with examples.",
+          "prompt_category": "long_text",
+          "response": " Machine learning is a process of teaching computers to learn and improve from experience, without being explicitly programmed. Here is a step-by-step guide on the complete process of machine learning from data collection to model deployment:\n\n1. Define the problem: The first step is to define the problem you want to solve with machine learning. For example, you may want to predict the price of a house based on its size, location, and other factors.\n\n2. Data collection: Once you have defined the problem, you",
+          "response_analysis": {
+            "word_count": 85,
+            "sentence_count": 6,
+            "paragraph_count": 3,
+            "avg_words_per_sentence": 14.166666666666666,
+            "character_count": 513,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.9600470066070557,
+          "prompt_tokens": 19,
+          "completion_tokens": 110,
+          "total_tokens": 130,
+          "throughput": 56.121103029266514,
+          "tokens_per_second": 56.121103029266514,
+          "client_cpu_usage": 38.9,
+          "client_ram_usage": 54.5,
+          "client_gpu_usage": 31.0,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494967.478444,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 39.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 49.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 75.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 42.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Explain the complete process of machine learning from data collection to model deployment, with examples.",
+          "prompt_category": "long_text",
+          "response": " Machine learning is a process of teaching computers to learn from data and make predictions or decisions without being explicitly programmed. The complete process of machine learning involves several steps, including data collection, data preprocessing, feature engineering, model training, model evaluation, hyperparameter tuning, and model deployment. Here's a detailed explanation of each step with examples:\n\n1. Data Collection: The first step in the machine learning process is to collect relevant data for the specific task. The data can be collected from various sources such as",
+          "response_analysis": {
+            "word_count": 85,
+            "sentence_count": 5,
+            "paragraph_count": 2,
+            "avg_words_per_sentence": 17.0,
+            "character_count": 586,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.9198379516601562,
+          "prompt_tokens": 19,
+          "completion_tokens": 110,
+          "total_tokens": 130,
+          "throughput": 57.29650250161939,
+          "tokens_per_second": 57.29650250161939,
+          "client_cpu_usage": 40.35,
+          "client_ram_usage": 54.45,
+          "client_gpu_usage": 33.75,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494969.9991596,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 45.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 49.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 86.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Explain the complete process of machine learning from data collection to model deployment, with examples.",
+          "prompt_category": "long_text",
+          "response": " The process of machine learning involves several steps, including data collection, data preprocessing, model selection, training, validation, and deployment. Here's a detailed explanation of each step with examples:\n\n1. Data Collection:\nData collection is the first and most crucial step in the machine learning process. It involves gathering relevant and appropriate data from various sources such as databases, websites, sensors, or APIs. For example, if you want to develop a model to predict customer churn, you might collect data on customer demographics",
+          "response_analysis": {
+            "word_count": 82,
+            "sentence_count": 5,
+            "paragraph_count": 2,
+            "avg_words_per_sentence": 16.4,
+            "character_count": 560,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.999617099761963,
+          "prompt_tokens": 19,
+          "completion_tokens": 106,
+          "total_tokens": 126,
+          "throughput": 53.010148799296815,
+          "tokens_per_second": 53.010148799296815,
+          "client_cpu_usage": 39.35,
+          "client_ram_usage": 54.4,
+          "client_gpu_usage": 58.75,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494972.6063926,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 14.000000000000002,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 86.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 41.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 87.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        }
+      ],
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "gpu_count": 2,
+      "individual_gpu_metrics": [
+        {
+          "gpu_id": 0,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 26.666666666666668,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 45.666666666666664,
+          "std_gpu_load": 22.49197387711645,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        },
+        {
+          "gpu_id": 1,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 55.666666666666664,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 41.333333333333336,
+          "std_gpu_load": 39.567101935263786,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        }
+      ],
+      "gpu_info": [
+        {
+          "id": 0,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-b654b3b5-e131-a373-afad-85e6bfeced36"
+        },
+        {
+          "id": 1,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-3218848a-ac35-31d4-17dc-f401191dc377"
+        }
+      ]
+    },
+    {
+      "prompt": "Write a short story about a robot learning to paint.",
+      "prompt_category": "creative",
+      "iterations": 3,
+      "avg_total_time": 1.854049523671468,
+      "avg_throughput": 59.119815684738704,
+      "avg_prompt_tokens": 13.0,
+      "avg_completion_tokens": 109.66666666666667,
+      "avg_client_cpu": 41.1,
+      "avg_client_ram": 54.46666666666667,
+      "avg_client_gpu": 49.416666666666664,
+      "avg_client_gpu_mem": 81.33447321283178,
+      "std_total_time": 0.037849971759602676,
+      "std_throughput": 2.7706505206850567,
+      "avg_response_analysis": {
+        "avg_word_count": 84.66666666666667,
+        "avg_sentence_count": 4.666666666666667,
+        "avg_character_count": 482.3333333333333,
+        "avg_words_per_sentence": 18.366666666666667,
+        "dominant_length_category": "medium"
+      },
+      "detailed_results": [
+        {
+          "prompt": "Write a short story about a robot learning to paint.",
+          "prompt_category": "creative",
+          "response": " Once upon a time, in a bustling city filled with towering skyscrapers and bustling streets, there was a small robot named Zephyr. Zephyr was unlike any other robot; he was programmed not for mechanical tasks but for creativity. His creators hoped that he would one day learn to paint.\n\nZephyr's painting journey began in a small, cluttered garage filled with paint cans, brushes, and canvases. The garage was his studio, and he spent his days experimenting with colors",
+          "response_analysis": {
+            "word_count": 78,
+            "sentence_count": 5,
+            "paragraph_count": 2,
+            "avg_words_per_sentence": 15.6,
+            "character_count": 469,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.8292696475982666,
+          "prompt_tokens": 13,
+          "completion_tokens": 101,
+          "total_tokens": 114,
+          "throughput": 55.2132924375625,
+          "tokens_per_second": 55.2132924375625,
+          "client_cpu_usage": 40.9,
+          "client_ram_usage": 54.45,
+          "client_gpu_usage": 34.0,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494975.55371,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 39.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 49.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 87.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Write a short story about a robot learning to paint.",
+          "prompt_category": "creative",
+          "response": " Title: Palette and Pixels\n\nIn a cluttered workshop filled with the scent of oil paints and the distant echo of laughter, stood a tall, sleek robot named Pixel. Unlike his fellow robots, Pixel was not built for mechanical tasks but for a different kind of creation. His creators, a group of artists and engineers, had programmed him to learn and adapt, to explore the world of art in a way no other machine ever had.\n\nPixel's body was made of polished aluminum, with arms that moved",
+          "response_analysis": {
+            "word_count": 86,
+            "sentence_count": 4,
+            "paragraph_count": 3,
+            "avg_words_per_sentence": 21.5,
+            "character_count": 482,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.8253493309020996,
+          "prompt_tokens": 13,
+          "completion_tokens": 111,
+          "total_tokens": 124,
+          "throughput": 60.81027785796107,
+          "tokens_per_second": 60.81027785796107,
+          "client_cpu_usage": 41.1,
+          "client_ram_usage": 54.55,
+          "client_gpu_usage": 68.25,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494977.9579902,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 49.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 87.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 49.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 88.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Write a short story about a robot learning to paint.",
+          "prompt_category": "creative",
+          "response": " Once upon a time, in a small town nestled in the heart of the countryside, there lived a robot named Max. Max was a curious and creative robot, always looking for new ways to explore and understand the world around him. One day, he stumbled upon a painting studio and became fascinated by the colorful canvases and the way the brush strokes danced across them.\n\nMax had always been a good mechanic and had a deep understanding of technology, but he had never really explored the world of art. He",
+          "response_analysis": {
+            "word_count": 90,
+            "sentence_count": 5,
+            "paragraph_count": 2,
+            "avg_words_per_sentence": 18.0,
+            "character_count": 496,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.907529592514038,
+          "prompt_tokens": 13,
+          "completion_tokens": 117,
+          "total_tokens": 130,
+          "throughput": 61.33587675869252,
+          "tokens_per_second": 61.33587675869252,
+          "client_cpu_usage": 41.3,
+          "client_ram_usage": 54.4,
+          "client_gpu_usage": 46.0,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494980.4749687,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 49.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 45.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 49.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 86.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        }
+      ],
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "gpu_count": 2,
+      "individual_gpu_metrics": [
+        {
+          "gpu_id": 0,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 40.833333333333336,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 45.5,
+          "std_gpu_load": 18.26122181624828,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        },
+        {
+          "gpu_id": 1,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 58.0,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 41.333333333333336,
+          "std_gpu_load": 41.01625693957621,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        }
+      ],
+      "gpu_info": [
+        {
+          "id": 0,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-b654b3b5-e131-a373-afad-85e6bfeced36"
+        },
+        {
+          "id": 1,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-3218848a-ac35-31d4-17dc-f401191dc377"
+        }
+      ]
+    },
+    {
+      "prompt": "Create a poem about the beauty of mathematics.",
+      "prompt_category": "creative",
+      "iterations": 3,
+      "avg_total_time": 1.8936833540598552,
+      "avg_throughput": 49.219983040482724,
+      "avg_prompt_tokens": 10.0,
+      "avg_completion_tokens": 93.0,
+      "avg_client_cpu": 40.833333333333336,
+      "avg_client_ram": 54.43333333333334,
+      "avg_client_gpu": 39.416666666666664,
+      "avg_client_gpu_mem": 81.33447321283178,
+      "std_total_time": 0.05954915882873381,
+      "std_throughput": 3.479401228265246,
+      "avg_response_analysis": {
+        "avg_word_count": 72.0,
+        "avg_sentence_count": 3.6666666666666665,
+        "avg_character_count": 442.3333333333333,
+        "avg_words_per_sentence": 20.755555555555556,
+        "dominant_length_category": "medium"
+      },
+      "detailed_results": [
+        {
+          "prompt": "Create a poem about the beauty of mathematics.",
+          "prompt_category": "creative",
+          "response": " In the realm of numbers, a wondrous sight,\nWhere equations dance with utmost delight,\nIn this world of figures, a perfect blend,\nOf beauty, and logic, and absolute bend.\n\nThe Pythagorean theorem, a timeless truth,\nWith a simple equation, a universal proof,\nThe Fibonacci sequence, a natural delight,\nIn the petals of flowers, in the spiral of light.\n\nThe golden ratio, a divine proportion,\nIn architecture, a perfect composition,\nIn art, in nature, in our",
+          "response_analysis": {
+            "word_count": 75,
+            "sentence_count": 3,
+            "paragraph_count": 3,
+            "avg_words_per_sentence": 25.0,
+            "character_count": 456,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.8317840099334717,
+          "prompt_tokens": 10,
+          "completion_tokens": 97,
+          "total_tokens": 107,
+          "throughput": 52.95384143216914,
+          "tokens_per_second": 52.95384143216914,
+          "client_cpu_usage": 38.75,
+          "client_ram_usage": 54.4,
+          "client_gpu_usage": 34.25,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494983.464472,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 89.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Create a poem about the beauty of mathematics.",
+          "prompt_category": "creative",
+          "response": " In the realm of numbers, where logic reigns,\nA world of beauty, in patterns, interlaced.\nAn infinite tapestry, woven with threads,\nOf equations, and functions, and proofs that are spread.\n\nEach number a note, in a symphony grand,\nWhere formulas dance, like a fluid, flowing band.\nA melody of reason, a song of the mind,\nA language for all, a universal find.\n\nThe beauty of mathematics, in its purest form,\nA world of",
+          "response_analysis": {
+            "word_count": 73,
+            "sentence_count": 5,
+            "paragraph_count": 3,
+            "avg_words_per_sentence": 14.6,
+            "character_count": 417,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.875180959701538,
+          "prompt_tokens": 10,
+          "completion_tokens": 94,
+          "total_tokens": 105,
+          "throughput": 50.12849533997052,
+          "tokens_per_second": 50.12849533997052,
+          "client_cpu_usage": 42.85,
+          "client_ram_usage": 54.45,
+          "client_gpu_usage": 25.25,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494985.944454,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 57.99999999999999,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 43.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Create a poem about the beauty of mathematics.",
+          "prompt_category": "creative",
+          "response": " Numbers dance in endless arrays,  \nA symphony of digits and hues,  \nIn patterns that weave through the maze,  \nGraceful curves and angles that muse.\n\nThe elegance of the Fibonacci sequence,  \nA testament to nature's design,  \nThe golden spiral that's ever so keen,  \nA harmony that's sublime.\n\nThe beauty of pi, never ending,  \nA constant that's remarkably grand,  \nA never-ending journey that's never beenending,  \nA mystery that's endlessly planned.\n\n",
+          "response_analysis": {
+            "word_count": 68,
+            "sentence_count": 3,
+            "paragraph_count": 3,
+            "avg_words_per_sentence": 22.666666666666668,
+            "character_count": 454,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.9740850925445557,
+          "prompt_tokens": 10,
+          "completion_tokens": 88,
+          "total_tokens": 98,
+          "throughput": 44.5776123493085,
+          "tokens_per_second": 44.5776123493085,
+          "client_cpu_usage": 40.900000000000006,
+          "client_ram_usage": 54.45,
+          "client_gpu_usage": 58.75,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494988.547165,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 57.99999999999999,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 45.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 43.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 46.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 86.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        }
+      ],
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "gpu_count": 2,
+      "individual_gpu_metrics": [
+        {
+          "gpu_id": 0,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 35.333333333333336,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 45.333333333333336,
+          "std_gpu_load": 25.315783394730033,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        },
+        {
+          "gpu_id": 1,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 43.5,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 41.5,
+          "std_gpu_load": 35.733970765458835,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        }
+      ],
+      "gpu_info": [
+        {
+          "id": 0,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-b654b3b5-e131-a373-afad-85e6bfeced36"
+        },
+        {
+          "id": 1,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-3218848a-ac35-31d4-17dc-f401191dc377"
+        }
+      ]
+    },
+    {
+      "prompt": "Explain the differences between SQL and NoSQL databases with examples.",
+      "prompt_category": "technical",
+      "iterations": 3,
+      "avg_total_time": 1.8952508767445881,
+      "avg_throughput": 54.91882605053714,
+      "avg_prompt_tokens": 13.0,
+      "avg_completion_tokens": 103.66666666666667,
+      "avg_client_cpu": 40.7,
+      "avg_client_ram": 54.449999999999996,
+      "avg_client_gpu": 38.416666666666664,
+      "avg_client_gpu_mem": 81.33447321283178,
+      "std_total_time": 0.07743675770896866,
+      "std_throughput": 5.6736075188081445,
+      "avg_response_analysis": {
+        "avg_word_count": 80.33333333333333,
+        "avg_sentence_count": 5.666666666666667,
+        "avg_character_count": 541.0,
+        "avg_words_per_sentence": 14.765873015873018,
+        "dominant_length_category": "medium"
+      },
+      "detailed_results": [
+        {
+          "prompt": "Explain the differences between SQL and NoSQL databases with examples.",
+          "prompt_category": "technical",
+          "response": " SQL and NoSQL databases are two different approaches to storing and managing data. They have different strengths, weaknesses, and use cases.\n\nSQL databases are relational databases that use a structured query language (SQL) to store and retrieve data. They are designed to handle structured data and support complex queries with joins, subqueries, and transactions. SQL databases are suitable for applications that require a fixed schema, often used in large enterprises with complex data relationships and requirements for data consistency and reliability.\n\nExample of a SQL database",
+          "response_analysis": {
+            "word_count": 86,
+            "sentence_count": 6,
+            "paragraph_count": 3,
+            "avg_words_per_sentence": 14.333333333333334,
+            "character_count": 585,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.8607988357543945,
+          "prompt_tokens": 13,
+          "completion_tokens": 111,
+          "total_tokens": 124,
+          "throughput": 59.65180000502258,
+          "tokens_per_second": 59.65180000502258,
+          "client_cpu_usage": 39.5,
+          "client_ram_usage": 54.45,
+          "client_gpu_usage": 34.25,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494991.5647712,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 89.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Explain the differences between SQL and NoSQL databases with examples.",
+          "prompt_category": "technical",
+          "response": " SQL (Structured Query Language) and NoSQL (Not Only SQL) are two popular types of databases. They differ in their structure, scalability, and flexibility.\n\nSQL databases are relational databases that store data in tables. Each table has columns and rows, and data is stored in a predefined schema. SQL databases are designed for structured data and are ideal for applications that require complex queries and transactions. Examples of SQL databases include MySQL, PostgreSQL, and Microsoft SQL Server.\n\nNoSQL databases, on the other hand",
+          "response_analysis": {
+            "word_count": 82,
+            "sentence_count": 7,
+            "paragraph_count": 3,
+            "avg_words_per_sentence": 11.714285714285714,
+            "character_count": 538,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.8224520683288574,
+          "prompt_tokens": 13,
+          "completion_tokens": 106,
+          "total_tokens": 119,
+          "throughput": 58.16339526405176,
+          "tokens_per_second": 58.16339526405176,
+          "client_cpu_usage": 40.2,
+          "client_ram_usage": 54.5,
+          "client_gpu_usage": 46.5,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494993.9945278,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 45.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 42.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 49.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 89.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Explain the differences between SQL and NoSQL databases with examples.",
+          "prompt_category": "technical",
+          "response": " SQL (Structured Query Language) and NoSQL (Not Only SQL) databases are two different types of database systems with distinct characteristics and use cases. \n\n**SQL Databases:**\n- **Structure:** SQL databases follow a predefined schema, meaning that the structure of the data is defined in advance.\n- **Data Model:** They typically use a relational model, where data is organized into tables with rows and columns.\n- **Data Consistency:** SQL databases enforce ACID properties (Atomicity, Consistency",
+          "response_analysis": {
+            "word_count": 73,
+            "sentence_count": 4,
+            "paragraph_count": 2,
+            "avg_words_per_sentence": 18.25,
+            "character_count": 500,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 2.0025017261505127,
+          "prompt_tokens": 13,
+          "completion_tokens": 94,
+          "total_tokens": 107,
+          "throughput": 46.941282882537074,
+          "tokens_per_second": 46.941282882537074,
+          "client_cpu_usage": 42.400000000000006,
+          "client_ram_usage": 54.4,
+          "client_gpu_usage": 34.5,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494996.625539,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 41.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 49.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 89.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        }
+      ],
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "gpu_count": 2,
+      "individual_gpu_metrics": [
+        {
+          "gpu_id": 0,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 32.333333333333336,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 45.666666666666664,
+          "std_gpu_load": 22.866763848189994,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        },
+        {
+          "gpu_id": 1,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 44.5,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 42.0,
+          "std_gpu_load": 44.5,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        }
+      ],
+      "gpu_info": [
+        {
+          "id": 0,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-b654b3b5-e131-a373-afad-85e6bfeced36"
+        },
+        {
+          "id": 1,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-3218848a-ac35-31d4-17dc-f401191dc377"
+        }
+      ]
+    },
+    {
+      "prompt": "Describe the REST API architectural style and its principles.",
+      "prompt_category": "technical",
+      "iterations": 3,
+      "avg_total_time": 1.8881929715474446,
+      "avg_throughput": 55.79173766672724,
+      "avg_prompt_tokens": 11.0,
+      "avg_completion_tokens": 105.33333333333333,
+      "avg_client_cpu": 40.03333333333333,
+      "avg_client_ram": 54.48333333333333,
+      "avg_client_gpu": 41.5,
+      "avg_client_gpu_mem": 81.33447321283178,
+      "std_total_time": 0.013210505581572803,
+      "std_throughput": 1.0066971250154138,
+      "avg_response_analysis": {
+        "avg_word_count": 81.33333333333333,
+        "avg_sentence_count": 5.0,
+        "avg_character_count": 540.0,
+        "avg_words_per_sentence": 16.7,
+        "dominant_length_category": "medium"
+      },
+      "detailed_results": [
+        {
+          "prompt": "Describe the REST API architectural style and its principles.",
+          "prompt_category": "technical",
+          "response": " REST (Representational State Transfer) is an architectural style that defines a set of constraints and principles for designing networked applications. REST APIs are widely used to enable communication between clients and servers over a network, such as the internet. It is based on the principles of statelessness, client-server architecture, cacheability, uniform interface, and layered system.\n\n1. Statelessness: The server does not store any information about the client or its state between requests. This means that each request from the client must",
+          "response_analysis": {
+            "word_count": 81,
+            "sentence_count": 6,
+            "paragraph_count": 2,
+            "avg_words_per_sentence": 13.5,
+            "character_count": 556,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.9019315242767334,
+          "prompt_tokens": 11,
+          "completion_tokens": 105,
+          "total_tokens": 117,
+          "throughput": 55.207034879938384,
+          "tokens_per_second": 55.207034879938384,
+          "client_cpu_usage": 39.05,
+          "client_ram_usage": 54.5,
+          "client_gpu_usage": 29.5,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751494999.6910975,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 68.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 50.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Describe the REST API architectural style and its principles.",
+          "prompt_category": "technical",
+          "response": " Discuss the advantages of using REST APIs over SOAP-based web services.\nREST (Representational State Transfer) is an architectural style for designing networked applications, and a set of constraints that can be applied to a system to make it more scalable, maintainable, and efficient. REST APIs are used to build web services and are based on these principles:\n\n1. **Statelessness**: Each request from client to server must contain all the information needed to understand and process the request. The server does not store any",
+          "response_analysis": {
+            "word_count": 83,
+            "sentence_count": 5,
+            "paragraph_count": 2,
+            "avg_words_per_sentence": 16.6,
+            "character_count": 530,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.8703594207763672,
+          "prompt_tokens": 11,
+          "completion_tokens": 107,
+          "total_tokens": 119,
+          "throughput": 57.20825570284528,
+          "tokens_per_second": 57.20825570284528,
+          "client_cpu_usage": 40.55,
+          "client_ram_usage": 54.45,
+          "client_gpu_usage": 62.75,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751495002.148495,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 68.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 50.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 41.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 85.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "Describe the REST API architectural style and its principles.",
+          "prompt_category": "technical",
+          "response": " REST (Representational State Transfer) is an architectural style for designing distributed systems, such as the World Wide Web. It is based on a client-server model and a stateless communication protocol, typically HTTP, and it relies on the uniform interface principle to ensure the decoupling of components.\n\nHere are the key principles of REST:\n\n1. Client-Server Architecture: RESTful applications are stateless, meaning that each request from a client to a server must contain all the information needed to understand and process",
+          "response_analysis": {
+            "word_count": 80,
+            "sentence_count": 4,
+            "paragraph_count": 3,
+            "avg_words_per_sentence": 20.0,
+            "character_count": 534,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.8922879695892334,
+          "prompt_tokens": 11,
+          "completion_tokens": 104,
+          "total_tokens": 115,
+          "throughput": 54.959922417398076,
+          "tokens_per_second": 54.959922417398076,
+          "client_cpu_usage": 40.5,
+          "client_ram_usage": 54.5,
+          "client_gpu_usage": 32.25,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751495004.695018,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 45.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 43.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 86.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        }
+      ],
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "gpu_count": 2,
+      "individual_gpu_metrics": [
+        {
+          "gpu_id": 0,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 37.833333333333336,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 45.666666666666664,
+          "std_gpu_load": 28.322056579438026,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        },
+        {
+          "gpu_id": 1,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 45.166666666666664,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 41.666666666666664,
+          "std_gpu_load": 35.073335867705666,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        }
+      ],
+      "gpu_info": [
+        {
+          "id": 0,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-b654b3b5-e131-a373-afad-85e6bfeced36"
+        },
+        {
+          "id": 1,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-3218848a-ac35-31d4-17dc-f401191dc377"
+        }
+      ]
+    },
+    {
+      "prompt": "If you have 100 books and you read 3 books per week, how many weeks will it take to read all books? Show your reasoning.",
+      "prompt_category": "reasoning",
+      "iterations": 3,
+      "avg_total_time": 1.9175386428833008,
+      "avg_throughput": 42.65525450454463,
+      "avg_prompt_tokens": 32.0,
+      "avg_completion_tokens": 81.66666666666667,
+      "avg_client_cpu": 40.21666666666667,
+      "avg_client_ram": 54.43333333333334,
+      "avg_client_gpu": 45.5,
+      "avg_client_gpu_mem": 81.33447321283178,
+      "std_total_time": 0.031392604126342316,
+      "std_throughput": 4.173508476955764,
+      "avg_response_analysis": {
+        "avg_word_count": 63.0,
+        "avg_sentence_count": 2.0,
+        "avg_character_count": 352.0,
+        "avg_words_per_sentence": 37.61111111111111,
+        "dominant_length_category": "medium"
+      },
+      "detailed_results": [
+        {
+          "prompt": "If you have 100 books and you read 3 books per week, how many weeks will it take to read all books? Show your reasoning.",
+          "prompt_category": "reasoning",
+          "response": " To find out how many weeks it will take to read 100 books, given that you read 3 books per week, you can use the following calculation:\n\n1. **Total number of books** = 100\n2. **Books read per week** = 3\n\nTo determine the total number of weeks required, divide the total number of books by the number of books read per week:\n\n\\[ \\text{Number of weeks} = \\frac{\\text{Total number",
+          "response_analysis": {
+            "word_count": 70,
+            "sentence_count": 3,
+            "paragraph_count": 4,
+            "avg_words_per_sentence": 23.333333333333332,
+            "character_count": 378,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.8772141933441162,
+          "prompt_tokens": 32,
+          "completion_tokens": 91,
+          "total_tokens": 123,
+          "throughput": 48.47608777019224,
+          "tokens_per_second": 48.47608777019224,
+          "client_cpu_usage": 38.3,
+          "client_ram_usage": 54.45,
+          "client_gpu_usage": 34.25,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751495007.7321455,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 89.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "If you have 100 books and you read 3 books per week, how many weeks will it take to read all books? Show your reasoning.",
+          "prompt_category": "reasoning",
+          "response": " To determine how many weeks it will take to read all 100 books if you read 3 books per week, you need to divide the total number of books by the number of books read per week.\n\nHere's the calculation:\n\n\\[\n\\text{Number of weeks} = \\frac{\\text{Total number of books}}{\\text{Number of books read per week}} = \\frac{100}{3}\n\\]\n\n\\[\n\\frac{100}{3",
+          "response_analysis": {
+            "word_count": 59,
+            "sentence_count": 2,
+            "paragraph_count": 4,
+            "avg_words_per_sentence": 29.5,
+            "character_count": 340,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.9537849426269531,
+          "prompt_tokens": 32,
+          "completion_tokens": 76,
+          "total_tokens": 109,
+          "throughput": 38.898856441085336,
+          "tokens_per_second": 38.898856441085336,
+          "client_cpu_usage": 40.35,
+          "client_ram_usage": 54.45,
+          "client_gpu_usage": 56.25,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751495010.4146457,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 45.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 88.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 41.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 89.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "If you have 100 books and you read 3 books per week, how many weeks will it take to read all books? Show your reasoning.",
+          "prompt_category": "reasoning",
+          "response": " To determine how many weeks it will take to read all 100 books at a rate of 3 books per week, you can divide the total number of books by the number of books read per week:\n\n\\[\n\\text{Total weeks} = \\frac{\\text{Total number of books}}{\\text{Books read per week}} = \\frac{100}{3}\n\\]\n\nWhen you perform the division, you get:\n\n\\[\n\\frac{100}{",
+          "response_analysis": {
+            "word_count": 60,
+            "sentence_count": 1,
+            "paragraph_count": 4,
+            "avg_words_per_sentence": 60.0,
+            "character_count": 338,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.921616792678833,
+          "prompt_tokens": 32,
+          "completion_tokens": 78,
+          "total_tokens": 110,
+          "throughput": 40.59081930235631,
+          "tokens_per_second": 40.59081930235631,
+          "client_cpu_usage": 42.0,
+          "client_ram_usage": 54.4,
+          "client_gpu_usage": 46.0,
+          "client_gpu_memory": 81.33447321283178,
+          "timestamp": 1751495012.9546974,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 41.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 48.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 88.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            }
+          ],
+          "gpu_count": 2
+        }
+      ],
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "gpu_count": 2,
+      "individual_gpu_metrics": [
+        {
+          "gpu_id": 0,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 32.0,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 45.833333333333336,
+          "std_gpu_load": 22.627416997969522,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        },
+        {
+          "gpu_id": 1,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 59.0,
+          "avg_gpu_memory_percent": 81.33447321283178,
+          "avg_gpu_memory_used": 19979.0,
+          "avg_gpu_temperature": 42.166666666666664,
+          "std_gpu_load": 41.72129751897305,
+          "std_gpu_memory_percent": 0.0,
+          "measurements_count": 6
+        }
+      ],
+      "gpu_info": [
+        {
+          "id": 0,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-b654b3b5-e131-a373-afad-85e6bfeced36"
+        },
+        {
+          "id": 1,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-3218848a-ac35-31d4-17dc-f401191dc377"
+        }
+      ]
+    },
+    {
+      "prompt": "A train leaves Station A at 2 PM traveling at 60 mph. Another train leaves Station B at 3 PM traveling at 80 mph toward Station A. If the stations are 200 miles apart, when will the trains meet?",
+      "prompt_category": "reasoning",
+      "iterations": 3,
+      "avg_total_time": 1.9408934116363525,
+      "avg_throughput": 50.760731865007266,
+      "avg_prompt_tokens": 50.0,
+      "avg_completion_tokens": 98.33333333333333,
+      "avg_client_cpu": 40.36666666666667,
+      "avg_client_ram": 54.550000000000004,
+      "avg_client_gpu": 43.916666666666664,
+      "avg_client_gpu_mem": 81.34125820984639,
+      "std_total_time": 0.10286976383673103,
+      "std_throughput": 1.9625253513698837,
+      "avg_response_analysis": {
+        "avg_word_count": 76.0,
+        "avg_sentence_count": 6.0,
+        "avg_character_count": 401.6666666666667,
+        "avg_words_per_sentence": 12.946031746031744,
+        "dominant_length_category": "medium"
+      },
+      "detailed_results": [
+        {
+          "prompt": "A train leaves Station A at 2 PM traveling at 60 mph. Another train leaves Station B at 3 PM traveling at 80 mph toward Station A. If the stations are 200 miles apart, when will the trains meet?",
+          "prompt_category": "reasoning",
+          "response": " To determine when the two trains will meet, we need to calculate the time it takes for them to cover the distance between the stations combined. Let's break down the problem step by step.\n\n1. **Identify the distance and speeds of the trains:**\n   - Distance between Station A and Station B: 200 miles.\n   - Speed of the train from Station A: 60 mph.\n   - Speed of the train from Station B: 80 mph.\n\n2.",
+          "response_analysis": {
+            "word_count": 74,
+            "sentence_count": 7,
+            "paragraph_count": 3,
+            "avg_words_per_sentence": 10.571428571428571,
+            "character_count": 402,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.9023306369781494,
+          "prompt_tokens": 50,
+          "completion_tokens": 96,
+          "total_tokens": 146,
+          "throughput": 50.46441356403528,
+          "tokens_per_second": 50.46441356403528,
+          "client_cpu_usage": 39.45,
+          "client_ram_usage": 54.5,
+          "client_gpu_usage": 36.5,
+          "client_gpu_memory": 81.33854421104054,
+          "timestamp": 1751495015.9636858,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 8.0,
+              "gpu_memory_used": 19979.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.33447321283178,
+              "gpu_temperature": 40.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19981.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.3426152092493,
+              "gpu_temperature": 48.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 90.0,
+              "gpu_memory_used": 19981.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.3426152092493,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "A train leaves Station A at 2 PM traveling at 60 mph. Another train leaves Station B at 3 PM traveling at 80 mph toward Station A. If the stations are 200 miles apart, when will the trains meet?",
+          "prompt_category": "reasoning",
+          "response": " To determine when the two trains will meet, we need to calculate the time it takes for the combined distance they travel to equal the distance between the two stations.\n\n1. **Identify the distance each train travels:**\n   - Train A travels at 60 mph.\n   - Train B travels at 80 mph.\n\n2. **Determine the head start of Train A:**\n   - Train A leaves at 2 PM and Train B leaves at 3 PM, so Train A",
+          "response_analysis": {
+            "word_count": 76,
+            "sentence_count": 6,
+            "paragraph_count": 3,
+            "avg_words_per_sentence": 12.666666666666666,
+            "character_count": 395,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 1.8386924266815186,
+          "prompt_tokens": 50,
+          "completion_tokens": 98,
+          "total_tokens": 149,
+          "throughput": 53.298745661812994,
+          "tokens_per_second": 53.298745661812994,
+          "client_cpu_usage": 40.55,
+          "client_ram_usage": 54.55,
+          "client_gpu_usage": 32.75,
+          "client_gpu_memory": 81.3426152092493,
+          "timestamp": 1751495018.3948987,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19981.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.3426152092493,
+              "gpu_temperature": 44.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 0.0,
+              "gpu_memory_used": 19981.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.3426152092493,
+              "gpu_temperature": 41.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 47.0,
+              "gpu_memory_used": 19981.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.3426152092493,
+              "gpu_temperature": 48.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 84.0,
+              "gpu_memory_used": 19981.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.3426152092493,
+              "gpu_temperature": 44.0
+            }
+          ],
+          "gpu_count": 2
+        },
+        {
+          "prompt": "A train leaves Station A at 2 PM traveling at 60 mph. Another train leaves Station B at 3 PM traveling at 80 mph toward Station A. If the stations are 200 miles apart, when will the trains meet?",
+          "prompt_category": "reasoning",
+          "response": " To determine when the two trains will meet, we need to calculate the time at which their combined distances traveled sum up to the total distance between the stations.\n\n1. **Identify the time and speeds of the trains:**\n   - Train A leaves Station A at 2 PM and travels at 60 mph.\n   - Train B leaves Station B at 3 PM and travels at 80 mph.\n   - The distance between Station A and Station B is 200 miles.\n\n",
+          "response_analysis": {
+            "word_count": 78,
+            "sentence_count": 5,
+            "paragraph_count": 2,
+            "avg_words_per_sentence": 15.6,
+            "character_count": 408,
+            "response_length_category": "medium"
+          },
+          "model": "Qwen/Qwen2.5-7B-Instruct",
+          "total_time": 2.0816571712493896,
+          "prompt_tokens": 50,
+          "completion_tokens": 101,
+          "total_tokens": 152,
+          "throughput": 48.51903636917352,
+          "tokens_per_second": 48.51903636917352,
+          "client_cpu_usage": 41.099999999999994,
+          "client_ram_usage": 54.6,
+          "client_gpu_usage": 62.5,
+          "client_gpu_memory": 81.3426152092493,
+          "timestamp": 1751495021.0665836,
+          "gpu_metrics_before": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 48.0,
+              "gpu_memory_used": 19981.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.3426152092493,
+              "gpu_temperature": 46.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 84.0,
+              "gpu_memory_used": 19981.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.3426152092493,
+              "gpu_temperature": 41.0
+            }
+          ],
+          "gpu_metrics_after": [
+            {
+              "gpu_id": 0,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 76.0,
+              "gpu_memory_used": 19981.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.3426152092493,
+              "gpu_temperature": 47.0
+            },
+            {
+              "gpu_id": 1,
+              "gpu_name": "NVIDIA GeForce RTX 4090",
+              "gpu_load": 42.0,
+              "gpu_memory_used": 19981.0,
+              "gpu_memory_total": 24564.0,
+              "gpu_memory_percent": 81.3426152092493,
+              "gpu_temperature": 43.0
+            }
+          ],
+          "gpu_count": 2
+        }
+      ],
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "gpu_count": 2,
+      "individual_gpu_metrics": [
+        {
+          "gpu_id": 0,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 36.5,
+          "avg_gpu_memory_percent": 81.34125820984637,
+          "avg_gpu_memory_used": 19980.666666666668,
+          "avg_gpu_temperature": 46.166666666666664,
+          "std_gpu_load": 27.68724134566919,
+          "std_gpu_memory_percent": 0.0030343429103561618,
+          "measurements_count": 6
+        },
+        {
+          "gpu_id": 1,
+          "gpu_name": "NVIDIA GeForce RTX 4090",
+          "gpu_memory_total": 24564.0,
+          "avg_gpu_load": 51.333333333333336,
+          "avg_gpu_memory_percent": 81.34125820984637,
+          "avg_gpu_memory_used": 19980.666666666668,
+          "avg_gpu_temperature": 42.0,
+          "std_gpu_load": 37.03451843288307,
+          "std_gpu_memory_percent": 0.0030343429103561618,
+          "measurements_count": 6
+        }
+      ],
+      "gpu_info": [
+        {
+          "id": 0,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-b654b3b5-e131-a373-afad-85e6bfeced36"
+        },
+        {
+          "id": 1,
+          "name": "NVIDIA GeForce RTX 4090",
+          "total_memory": 24564.0,
+          "driver": "570.158.01",
+          "uuid": "GPU-3218848a-ac35-31d4-17dc-f401191dc377"
+        }
+      ]
+    }
+  ]
+}
