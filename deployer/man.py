@@ -15,13 +15,10 @@ from ray import serve
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-from pprint import pprint
-import time
-
 @serve.deployment(
     name="vllm-model",
     num_replicas=1,
-    # ray_actor_options={"num_gpus": 1}
+    ray_actor_options={"num_gpus": 1}
 )
 class VLLMModelDeployment:
     """vLLM Model Deployment untuk single GPU"""
@@ -30,24 +27,16 @@ class VLLMModelDeployment:
         logger.info(f"Loading model: {model_name}")
 
         # Import vLLM
-        import vllm
         from vllm import LLM, SamplingParams
-        import os
-    
-        del os.environ['CUDA_VISIBLE_DEVICES']
 
-        os.environ['RAY_memory_usage_threshold'] = '0.8'
-        os.environ['NCCL_CUMEM_ENABLE'] = '0'
-        os.environ['VLLM_USE_V1'] = '1'
-        
+        # Initialize model dengan config untuk single GPU
         self.llm = LLM(
             model=model_name,
-            tensor_parallel_size=1,
-            pipeline_parallel_size=2,
+            tensor_parallel_size=1,  # Multi GPU
+            max_model_len=max_model_len,
             trust_remote_code=True,
             enforce_eager=True,
             gpu_memory_utilization=0.8,
-            max_model_len=2048,
             disable_log_stats=True,
         )
 
@@ -338,5 +327,4 @@ def main():
             pass
 
 if __name__ == "__main__":
-    import vllm
     main()

@@ -1,0 +1,439 @@
+================================================================================
+SINGLE GPU MODEL EVALUATION SUMMARY WITH CATEGORIZED PROMPTS
+================================================================================
+Ray cluster: auto-detected
+Model: Qwen/Qwen2.5-0.5B-Instruct
+Total prompts: 42
+Iterations per prompt: 3
+GPU available: True
+
+GPU Information:
+  GPU: NVIDIA GeForce RTX 4090 (24564.0MB)
+
+Prompt Category Analysis:
+  SHORT_TEXT: 10 prompts
+    Avg time: 1.39s, Avg throughput: 73.3 tok/s, Avg words: 80
+  LONG_TEXT: 8 prompts
+    Avg time: 1.43s, Avg throughput: 73.4 tok/s, Avg words: 81
+  CREATIVE: 8 prompts
+    Avg time: 1.45s, Avg throughput: 73.1 tok/s, Avg words: 82
+  TECHNICAL: 8 prompts
+    Avg time: 1.43s, Avg throughput: 76.9 tok/s, Avg words: 85
+  REASONING: 8 prompts
+    Avg time: 1.42s, Avg throughput: 65.9 tok/s, Avg words: 72
+
+Overall Performance Metrics:
+  Average inference time: 1.42s (±0.08s)
+  Average throughput: 72.55 tokens/s (±6.11)
+  Average prompt tokens: 14
+  Average completion tokens: 104
+  Average response words: 80
+
+Client Resource Usage:
+  Average CPU usage: 13.1%
+  Average RAM usage: 67.9%
+
+Response Length Distribution:
+  medium: 124 responses
+  short: 1 responses
+  very_short: 1 responses
+
+Detailed GPU Metrics (averaged across all evaluations):
+  GPU (NVIDIA GeForce RTX 4090):
+    Average load: 6.3%
+    Average memory usage: 74.7% (18353MB / 24564.0MB)
+    Average temperature: 44.9°C
+================================================================================
+
+Per-prompt Results (by Category):
+
+SHORT_TEXT:
+  What is AI?                                        | Time:  1.44s | Throughput:  79.6 tok/s | Words:  88 (medium)
+  Define machine learning.                           | Time:  1.43s | Throughput:  69.9 tok/s | Words:  77 (medium)
+  What is 2+2?                                       | Time:  0.96s | Throughput:  50.7 tok/s | Words:  41 (medium)
+  Name three colors.                                 | Time:  1.43s | Throughput:  74.2 tok/s | Words:  82 (medium)
+  What day is today?                                 | Time:  1.45s | Throughput:  73.3 tok/s | Words:  82 (medium)
+  Define quantum computing.                          | Time:  1.41s | Throughput:  75.8 tok/s | Words:  82 (medium)
+  What is Python programming?                        | Time:  1.40s | Throughput:  77.5 tok/s | Words:  84 (medium)
+  Name a popular database.                           | Time:  1.42s | Throughput:  77.4 tok/s | Words:  85 (medium)
+  Define blockchain.                                 | Time:  1.44s | Throughput:  80.2 tok/s | Words:  89 (medium)
+  What is cloud computing?                           | Time:  1.50s | Throughput:  74.4 tok/s | Words:  86 (medium)
+
+LONG_TEXT:
+  Write a detailed explanation of how artificial int | Time:  1.44s | Throughput:  74.1 tok/s | Words:  82 (medium)
+  Explain the complete process of machine learning f | Time:  1.43s | Throughput:  77.1 tok/s | Words:  85 (medium)
+  Write a comprehensive guide on renewable energy so | Time:  1.45s | Throughput:  73.5 tok/s | Words:  83 (medium)
+  Describe the evolution of computer technology from | Time:  1.41s | Throughput:  64.5 tok/s | Words:  70 (medium)
+  Write a detailed analysis of climate change causes | Time:  1.39s | Throughput:  79.3 tok/s | Words:  85 (medium)
+  Explain how the internet works, from physical infr | Time:  1.48s | Throughput:  72.3 tok/s | Words:  83 (medium)
+  Write a comprehensive overview of modern programmi | Time:  1.43s | Throughput:  75.6 tok/s | Words:  84 (medium)
+  Describe the complete software development lifecyc | Time:  1.44s | Throughput:  70.6 tok/s | Words:  79 (medium)
+
+CREATIVE:
+  Write a short story about a robot learning to pain | Time:  1.45s | Throughput:  75.5 tok/s | Words:  84 (medium)
+  Create a poem about the beauty of mathematics.     | Time:  1.42s | Throughput:  72.7 tok/s | Words:  80 (medium)
+  Write a creative dialogue between two AI systems.  | Time:  1.41s | Throughput:  72.4 tok/s | Words:  79 (medium)
+  Compose a song about space exploration.            | Time:  1.47s | Throughput:  67.7 tok/s | Words:  76 (medium)
+  Write a fictional news report from the year 2050.  | Time:  1.47s | Throughput:  78.8 tok/s | Words:  89 (medium)
+  Create a humorous conversation between a programme | Time:  1.44s | Throughput:  68.7 tok/s | Words:  77 (medium)
+  Write a short play about time travel.              | Time:  1.51s | Throughput:  72.5 tok/s | Words:  85 (medium)
+  Compose a creative essay about the color blue.     | Time:  1.45s | Throughput:  76.4 tok/s | Words:  85 (medium)
+
+TECHNICAL:
+  Explain the differences between SQL and NoSQL data | Time:  1.41s | Throughput:  75.3 tok/s | Words:  82 (medium)
+  Describe the REST API architectural style and its  | Time:  1.41s | Throughput:  80.2 tok/s | Words:  87 (medium)
+  Explain how containerization works with Docker and | Time:  1.40s | Throughput:  79.8 tok/s | Words:  87 (medium)
+  Describe the MVC (Model-View-Controller) design pa | Time:  1.43s | Throughput:  78.2 tok/s | Words:  86 (medium)
+  Explain the concept of microservices architecture. | Time:  1.46s | Throughput:  77.1 tok/s | Words:  87 (medium)
+  Describe how version control systems like Git work | Time:  1.48s | Throughput:  78.1 tok/s | Words:  90 (medium)
+  Explain the principles of object-oriented programm | Time:  1.42s | Throughput:  75.2 tok/s | Words:  82 (medium)
+  Describe the difference between relational and non | Time:  1.46s | Throughput:  71.2 tok/s | Words:  80 (medium)
+
+REASONING:
+  If you have 100 books and you read 3 books per wee | Time:  1.45s | Throughput:  64.0 tok/s | Words:  71 (medium)
+  A train leaves Station A at 2 PM traveling at 60 m | Time:  1.45s | Throughput:  67.6 tok/s | Words:  76 (medium)
+  You have a 3-gallon jug and a 5-gallon jug. How ca | Time:  1.42s | Throughput:  57.8 tok/s | Words:  64 (medium)
+  If all roses are flowers, and some flowers are red | Time:  1.43s | Throughput:  68.5 tok/s | Words:  76 (medium)
+  In a group of 30 people, everyone shakes hands exa | Time:  1.42s | Throughput:  66.8 tok/s | Words:  73 (medium)
+  If it takes 5 machines 5 minutes to make 5 widgets | Time:  1.42s | Throughput:  68.9 tok/s | Words:  75 (medium)
+  You have 12 balls, one of which is heavier than th | Time:  1.39s | Throughput:  68.2 tok/s | Words:  74 (medium)
+  If a shirt costs $20 after a 20% discount, what wa | Time:  1.41s | Throughput:  65.2 tok/s | Words:  71 (medium)
+
+✓ Evaluation completed! Results saved to categorized_single_gpu_evaluation_1751503194.json
+
+
+================================================================================
+SINGLE GPU MODEL EVALUATION SUMMARY WITH CATEGORIZED PROMPTS
+================================================================================
+Ray cluster: auto-detected
+Model: Qwen/Qwen2.5-1.5B-Instruct
+Total prompts: 42
+Iterations per prompt: 3
+GPU available: True
+
+GPU Information:
+  GPU: NVIDIA GeForce RTX 4090 (24564.0MB)
+
+Prompt Category Analysis:
+  SHORT_TEXT: 10 prompts
+    Avg time: 1.66s, Avg throughput: 59.3 tok/s, Avg words: 76
+  LONG_TEXT: 8 prompts
+    Avg time: 1.63s, Avg throughput: 65.2 tok/s, Avg words: 82
+  CREATIVE: 8 prompts
+    Avg time: 1.67s, Avg throughput: 59.2 tok/s, Avg words: 76
+  TECHNICAL: 8 prompts
+    Avg time: 1.66s, Avg throughput: 66.4 tok/s, Avg words: 85
+  REASONING: 8 prompts
+    Avg time: 1.65s, Avg throughput: 57.4 tok/s, Avg words: 73
+
+Overall Performance Metrics:
+  Average inference time: 1.65s (±0.06s)
+  Average throughput: 61.40 tokens/s (±8.10)
+  Average prompt tokens: 14
+  Average completion tokens: 101
+  Average response words: 78
+
+Client Resource Usage:
+  Average CPU usage: 12.4%
+  Average RAM usage: 74.2%
+
+Response Length Distribution:
+  medium: 123 responses
+  short: 2 responses
+  very_short: 1 responses
+
+Detailed GPU Metrics (averaged across all evaluations):
+  GPU (NVIDIA GeForce RTX 4090):
+    Average load: 12.2%
+    Average memory usage: 75.1% (18449MB / 24564.0MB)
+    Average temperature: 41.6°C
+================================================================================
+
+Per-prompt Results (by Category):
+
+SHORT_TEXT:
+  What is AI?                                        | Time:  1.72s | Throughput:  63.9 tok/s | Words:  85 (medium)
+  Define machine learning.                           | Time:  1.66s | Throughput:  68.3 tok/s | Words:  87 (medium)
+  What is 2+2?                                       | Time:  1.70s | Throughput:  21.8 tok/s | Words:  29 (short)
+  Name three colors.                                 | Time:  1.74s | Throughput:  60.0 tok/s | Words:  81 (medium)
+  What day is today?                                 | Time:  1.35s | Throughput:  63.3 tok/s | Words:  66 (medium)
+  Define quantum computing.                          | Time:  1.70s | Throughput:  59.6 tok/s | Words:  78 (medium)
+  What is Python programming?                        | Time:  1.66s | Throughput:  60.7 tok/s | Words:  78 (medium)
+  Name a popular database.                           | Time:  1.67s | Throughput:  67.7 tok/s | Words:  88 (medium)
+  Define blockchain.                                 | Time:  1.67s | Throughput:  63.1 tok/s | Words:  81 (medium)
+  What is cloud computing?                           | Time:  1.72s | Throughput:  65.2 tok/s | Words:  86 (medium)
+
+LONG_TEXT:
+  Write a detailed explanation of how artificial int | Time:  1.60s | Throughput:  66.7 tok/s | Words:  82 (medium)
+  Explain the complete process of machine learning f | Time:  1.63s | Throughput:  67.5 tok/s | Words:  85 (medium)
+  Write a comprehensive guide on renewable energy so | Time:  1.61s | Throughput:  65.8 tok/s | Words:  82 (medium)
+  Describe the evolution of computer technology from | Time:  1.65s | Throughput:  54.4 tok/s | Words:  69 (medium)
+  Write a detailed analysis of climate change causes | Time:  1.61s | Throughput:  65.1 tok/s | Words:  81 (medium)
+  Explain how the internet works, from physical infr | Time:  1.63s | Throughput:  71.4 tok/s | Words:  90 (medium)
+  Write a comprehensive overview of modern programmi | Time:  1.64s | Throughput:  68.6 tok/s | Words:  87 (medium)
+  Describe the complete software development lifecyc | Time:  1.70s | Throughput:  61.8 tok/s | Words:  81 (medium)
+
+CREATIVE:
+  Write a short story about a robot learning to pain | Time:  1.68s | Throughput:  64.8 tok/s | Words:  84 (medium)
+  Create a poem about the beauty of mathematics.     | Time:  1.66s | Throughput:  63.3 tok/s | Words:  81 (medium)
+  Write a creative dialogue between two AI systems.  | Time:  1.61s | Throughput:  59.5 tok/s | Words:  74 (medium)
+  Compose a song about space exploration.            | Time:  1.69s | Throughput:  55.1 tok/s | Words:  72 (medium)
+  Write a fictional news report from the year 2050.  | Time:  1.65s | Throughput:  57.4 tok/s | Words:  73 (medium)
+  Create a humorous conversation between a programme | Time:  1.66s | Throughput:  51.3 tok/s | Words:  66 (medium)
+  Write a short play about time travel.              | Time:  1.69s | Throughput:  56.9 tok/s | Words:  74 (medium)
+  Compose a creative essay about the color blue.     | Time:  1.72s | Throughput:  64.9 tok/s | Words:  86 (medium)
+
+TECHNICAL:
+  Explain the differences between SQL and NoSQL data | Time:  1.61s | Throughput:  68.3 tok/s | Words:  85 (medium)
+  Describe the REST API architectural style and its  | Time:  1.68s | Throughput:  62.8 tok/s | Words:  82 (medium)
+  Explain how containerization works with Docker and | Time:  1.70s | Throughput:  64.3 tok/s | Words:  84 (medium)
+  Describe the MVC (Model-View-Controller) design pa | Time:  1.66s | Throughput:  66.9 tok/s | Words:  85 (medium)
+  Explain the concept of microservices architecture. | Time:  1.64s | Throughput:  65.9 tok/s | Words:  83 (medium)
+  Describe how version control systems like Git work | Time:  1.65s | Throughput:  71.3 tok/s | Words:  91 (medium)
+  Explain the principles of object-oriented programm | Time:  1.68s | Throughput:  63.3 tok/s | Words:  82 (medium)
+  Describe the difference between relational and non | Time:  1.62s | Throughput:  68.8 tok/s | Words:  86 (medium)
+
+REASONING:
+  If you have 100 books and you read 3 books per wee | Time:  1.61s | Throughput:  59.7 tok/s | Words:  74 (medium)
+  A train leaves Station A at 2 PM traveling at 60 m | Time:  1.65s | Throughput:  64.2 tok/s | Words:  82 (medium)
+  You have a 3-gallon jug and a 5-gallon jug. How ca | Time:  1.64s | Throughput:  48.9 tok/s | Words:  62 (medium)
+  If all roses are flowers, and some flowers are red | Time:  1.65s | Throughput:  62.8 tok/s | Words:  80 (medium)
+  In a group of 30 people, everyone shakes hands exa | Time:  1.71s | Throughput:  57.5 tok/s | Words:  76 (medium)
+  If it takes 5 machines 5 minutes to make 5 widgets | Time:  1.70s | Throughput:  56.2 tok/s | Words:  74 (medium)
+  You have 12 balls, one of which is heavier than th | Time:  1.64s | Throughput:  54.7 tok/s | Words:  69 (medium)
+  If a shirt costs $20 after a 20% discount, what wa | Time:  1.63s | Throughput:  54.9 tok/s | Words:  69 (medium)
+Processed prompts: 100%|██████████| 1/1 [00:01<00:00,  1.60s/it, est. speed input: 13.16 toks/s, output: 62.67 toks/s]
+
+✓ Evaluation completed! Results saved to categorized_single_gpu_evaluation_1751504436.json
+
+Quick Summary by Category:
+  short_text: 10 prompts, 1.66s avg, 76 words avg
+  long_text: 8 prompts, 1.63s avg, 82 words avg
+  creative: 8 prompts, 1.67s avg, 76 words avg
+  technical: 8 prompts, 1.66s avg, 85 words avg
+  reasoning: 8 prompts, 1.65s avg, 73 words avg
+
+
+
+================================================================================
+SINGLE GPU MODEL EVALUATION SUMMARY WITH CATEGORIZED PROMPTS
+================================================================================
+Ray cluster: auto-detected
+Model: Qwen/Qwen2.5-3B-Instruct
+Total prompts: 42
+Iterations per prompt: 3
+GPU available: True
+
+GPU Information:
+  GPU: NVIDIA GeForce RTX 4090 (24564.0MB)
+
+Prompt Category Analysis:
+  SHORT_TEXT: 10 prompts
+    Avg time: 1.81s, Avg throughput: 51.9 tok/s, Avg words: 75
+  LONG_TEXT: 8 prompts
+    Avg time: 2.06s, Avg throughput: 49.1 tok/s, Avg words: 78
+  CREATIVE: 8 prompts
+    Avg time: 2.05s, Avg throughput: 47.9 tok/s, Avg words: 76
+  TECHNICAL: 8 prompts
+    Avg time: 2.06s, Avg throughput: 51.0 tok/s, Avg words: 81
+  REASONING: 8 prompts
+    Avg time: 2.03s, Avg throughput: 46.4 tok/s, Avg words: 73
+
+Overall Performance Metrics:
+  Average inference time: 1.99s (±0.22s)
+  Average throughput: 49.39 tokens/s (±4.71)
+  Average prompt tokens: 14
+  Average completion tokens: 99
+  Average response words: 76
+
+Client Resource Usage:
+  Average CPU usage: 11.9%
+  Average RAM usage: 62.3%
+
+Response Length Distribution:
+  medium: 122 responses
+  short: 2 responses
+  very_short: 2 responses
+
+Detailed GPU Metrics (averaged across all evaluations):
+  GPU (NVIDIA GeForce RTX 4090):
+    Average load: 18.2%
+    Average memory usage: 74.9% (18405MB / 24564.0MB)
+    Average temperature: 41.4°C
+================================================================================
+
+Per-prompt Results (by Category):
+
+SHORT_TEXT:
+  What is AI?                                        | Time:  2.01s | Throughput:  56.4 tok/s | Words:  88 (medium)
+  Define machine learning.                           | Time:  2.06s | Throughput:  55.6 tok/s | Words:  88 (medium)
+  What is 2+2?                                       | Time:  1.25s | Throughput:  51.3 tok/s | Words:  50 (short)
+  Name three colors.                                 | Time:  0.83s | Throughput:  36.1 tok/s | Words:  30 (very_short)
+  What day is today?                                 | Time:  1.91s | Throughput:  49.5 tok/s | Words:  73 (medium)
+  Define quantum computing.                          | Time:  2.03s | Throughput:  52.2 tok/s | Words:  82 (medium)
+  What is Python programming?                        | Time:  2.00s | Throughput:  52.5 tok/s | Words:  81 (medium)
+  Name a popular database.                           | Time:  2.00s | Throughput:  53.8 tok/s | Words:  83 (medium)
+  Define blockchain.                                 | Time:  2.02s | Throughput:  57.4 tok/s | Words:  90 (medium)
+  What is cloud computing?                           | Time:  2.00s | Throughput:  54.2 tok/s | Words:  84 (medium)
+
+LONG_TEXT:
+  Write a detailed explanation of how artificial int | Time:  1.99s | Throughput:  53.3 tok/s | Words:  82 (medium)
+  Explain the complete process of machine learning f | Time:  2.04s | Throughput:  49.7 tok/s | Words:  78 (medium)
+  Write a comprehensive guide on renewable energy so | Time:  2.18s | Throughput:  45.5 tok/s | Words:  77 (medium)
+  Describe the evolution of computer technology from | Time:  2.05s | Throughput:  40.0 tok/s | Words:  63 (medium)
+  Write a detailed analysis of climate change causes | Time:  2.05s | Throughput:  49.1 tok/s | Words:  77 (medium)
+  Explain how the internet works, from physical infr | Time:  2.04s | Throughput:  51.8 tok/s | Words:  82 (medium)
+  Write a comprehensive overview of modern programmi | Time:  2.09s | Throughput:  50.8 tok/s | Words:  82 (medium)
+  Describe the complete software development lifecyc | Time:  2.01s | Throughput:  52.5 tok/s | Words:  82 (medium)
+
+CREATIVE:
+  Write a short story about a robot learning to pain | Time:  2.04s | Throughput:  54.8 tok/s | Words:  86 (medium)
+  Create a poem about the beauty of mathematics.     | Time:  2.02s | Throughput:  50.0 tok/s | Words:  78 (medium)
+  Write a creative dialogue between two AI systems.  | Time:  2.03s | Throughput:  47.2 tok/s | Words:  74 (medium)
+  Compose a song about space exploration.            | Time:  2.07s | Throughput:  46.9 tok/s | Words:  75 (medium)
+  Write a fictional news report from the year 2050.  | Time:  2.08s | Throughput:  46.5 tok/s | Words:  74 (medium)
+  Create a humorous conversation between a programme | Time:  2.06s | Throughput:  42.4 tok/s | Words:  67 (medium)
+  Write a short play about time travel.              | Time:  2.00s | Throughput:  42.5 tok/s | Words:  66 (medium)
+  Compose a creative essay about the color blue.     | Time:  2.07s | Throughput:  53.1 tok/s | Words:  85 (medium)
+
+TECHNICAL:
+  Explain the differences between SQL and NoSQL data | Time:  2.01s | Throughput:  47.6 tok/s | Words:  74 (medium)
+  Describe the REST API architectural style and its  | Time:  2.05s | Throughput:  50.7 tok/s | Words:  80 (medium)
+  Explain how containerization works with Docker and | Time:  2.11s | Throughput:  49.6 tok/s | Words:  81 (medium)
+  Describe the MVC (Model-View-Controller) design pa | Time:  2.04s | Throughput:  52.2 tok/s | Words:  82 (medium)
+  Explain the concept of microservices architecture. | Time:  2.04s | Throughput:  52.1 tok/s | Words:  82 (medium)
+  Describe how version control systems like Git work | Time:  1.99s | Throughput:  56.6 tok/s | Words:  87 (medium)
+  Explain the principles of object-oriented programm | Time:  2.14s | Throughput:  46.8 tok/s | Words:  77 (medium)
+  Describe the difference between relational and non | Time:  2.06s | Throughput:  52.4 tok/s | Words:  83 (medium)
+
+REASONING:
+  If you have 100 books and you read 3 books per wee | Time:  2.09s | Throughput:  45.1 tok/s | Words:  73 (medium)
+  A train leaves Station A at 2 PM traveling at 60 m | Time:  2.09s | Throughput:  47.7 tok/s | Words:  77 (medium)
+  You have a 3-gallon jug and a 5-gallon jug. How ca | Time:  2.06s | Throughput:  39.2 tok/s | Words:  63 (medium)
+  If all roses are flowers, and some flowers are red | Time:  2.01s | Throughput:  50.6 tok/s | Words:  79 (medium)
+  In a group of 30 people, everyone shakes hands exa | Time:  2.02s | Throughput:  49.4 tok/s | Words:  77 (medium)
+  If it takes 5 machines 5 minutes to make 5 widgets | Time:  1.94s | Throughput:  46.7 tok/s | Words:  70 (medium)
+  You have 12 balls, one of which is heavier than th | Time:  2.04s | Throughput:  45.8 tok/s | Words:  73 (medium)
+  If a shirt costs $20 after a 20% discount, what wa | Time:  2.03s | Throughput:  46.5 tok/s | Words:  73 (medium)
+2025-07-02 18:12:59,195 - Results saved to: categorized_single_gpu_evaluation_1751505179.json
+
+✓ Evaluation completed! Results saved to categorized_single_gpu_evaluation_1751505179.json
+
+Quick Summary by Category:
+  short_text: 10 prompts, 1.81s avg, 75 words avg
+  long_text: 8 prompts, 2.06s avg, 78 words avg
+  creative: 8 prompts, 2.05s avg, 76 words avg
+  technical: 8 prompts, 2.06s avg, 81 words avg
+  reasoning: 8 prompts, 2.03s avg, 73 words avg
+
+
+================================================================================
+SINGLE GPU MODEL EVALUATION SUMMARY WITH CATEGORIZED PROMPTS
+================================================================================
+Ray cluster: auto-detected
+Model: Qwen/Qwen2.5-7B-Instruct
+Total prompts: 42
+Iterations per prompt: 3
+GPU available: True
+
+GPU Information:
+  GPU: NVIDIA GeForce RTX 4090 (24564.0MB)
+
+Prompt Category Analysis:
+  SHORT_TEXT: 10 prompts
+    Avg time: 1.64s, Avg throughput: 56.1 tok/s, Avg words: 73
+  LONG_TEXT: 8 prompts
+    Avg time: 1.81s, Avg throughput: 56.2 tok/s, Avg words: 78
+  CREATIVE: 8 prompts
+    Avg time: 1.81s, Avg throughput: 52.8 tok/s, Avg words: 74
+  TECHNICAL: 8 prompts
+    Avg time: 1.80s, Avg throughput: 58.7 tok/s, Avg words: 81
+  REASONING: 8 prompts
+    Avg time: 1.83s, Avg throughput: 51.1 tok/s, Avg words: 72
+
+Overall Performance Metrics:
+  Average inference time: 1.77s (±0.20s)
+  Average throughput: 55.03 tokens/s (±5.51)
+  Average prompt tokens: 14
+  Average completion tokens: 98
+  Average response words: 75
+
+Client Resource Usage:
+  Average CPU usage: 12.0%
+  Average RAM usage: 80.9%
+
+Response Length Distribution:
+  medium: 121 responses
+  short: 3 responses
+  very_short: 2 responses
+
+Detailed GPU Metrics (averaged across all evaluations):
+  GPU (NVIDIA GeForce RTX 4090):
+    Average load: 41.5%
+    Average memory usage: 74.6% (18330MB / 24564.0MB)
+    Average temperature: 51.0°C
+================================================================================
+
+Per-prompt Results (by Category):
+
+SHORT_TEXT:
+  What is AI?                                        | Time:  1.88s | Throughput:  59.9 tok/s | Words:  86 (medium)
+  Define machine learning.                           | Time:  1.81s | Throughput:  63.2 tok/s | Words:  88 (medium)
+  What is 2+2?                                       | Time:  1.78s | Throughput:  56.9 tok/s | Words:  78 (medium)
+  Name three colors.                                 | Time:  0.62s | Throughput:  43.8 tok/s | Words:  24 (short)
+  What day is today?                                 | Time:  1.42s | Throughput:  41.6 tok/s | Words:  43 (short)
+  Define quantum computing.                          | Time:  1.83s | Throughput:  55.7 tok/s | Words:  79 (medium)
+  What is Python programming?                        | Time:  1.74s | Throughput:  60.1 tok/s | Words:  81 (medium)
+  Name a popular database.                           | Time:  1.64s | Throughput:  60.0 tok/s | Words:  76 (medium)
+  Define blockchain.                                 | Time:  1.83s | Throughput:  62.0 tok/s | Words:  88 (medium)
+  What is cloud computing?                           | Time:  1.89s | Throughput:  58.1 tok/s | Words:  83 (medium)
+
+LONG_TEXT:
+  Write a detailed explanation of how artificial int | Time:  1.80s | Throughput:  61.4 tok/s | Words:  86 (medium)
+  Explain the complete process of machine learning f | Time:  1.81s | Throughput:  57.4 tok/s | Words:  80 (medium)
+  Write a comprehensive guide on renewable energy so | Time:  1.84s | Throughput:  58.0 tok/s | Words:  82 (medium)
+  Describe the evolution of computer technology from | Time:  1.80s | Throughput:  45.4 tok/s | Words:  63 (medium)
+  Write a detailed analysis of climate change causes | Time:  1.76s | Throughput:  56.7 tok/s | Words:  77 (medium)
+  Explain how the internet works, from physical infr | Time:  1.75s | Throughput:  58.9 tok/s | Words:  80 (medium)
+  Write a comprehensive overview of modern programmi | Time:  1.83s | Throughput:  60.1 tok/s | Words:  85 (medium)
+  Describe the complete software development lifecyc | Time:  1.86s | Throughput:  51.6 tok/s | Words:  74 (medium)
+
+CREATIVE:
+  Write a short story about a robot learning to pain | Time:  1.83s | Throughput:  57.9 tok/s | Words:  82 (medium)
+  Create a poem about the beauty of mathematics.     | Time:  1.77s | Throughput:  57.9 tok/s | Words:  79 (medium)
+  Write a creative dialogue between two AI systems.  | Time:  1.79s | Throughput:  48.7 tok/s | Words:  68 (medium)
+  Compose a song about space exploration.            | Time:  1.77s | Throughput:  50.9 tok/s | Words:  70 (medium)
+  Write a fictional news report from the year 2050.  | Time:  1.91s | Throughput:  48.4 tok/s | Words:  71 (medium)
+  Create a humorous conversation between a programme | Time:  1.77s | Throughput:  51.3 tok/s | Words:  70 (medium)
+  Write a short play about time travel.              | Time:  1.84s | Throughput:  48.1 tok/s | Words:  68 (medium)
+  Compose a creative essay about the color blue.     | Time:  1.78s | Throughput:  59.5 tok/s | Words:  82 (medium)
+
+TECHNICAL:
+  Explain the differences between SQL and NoSQL data | Time:  1.78s | Throughput:  58.8 tok/s | Words:  81 (medium)
+  Describe the REST API architectural style and its  | Time:  1.79s | Throughput:  60.2 tok/s | Words:  83 (medium)
+  Explain how containerization works with Docker and | Time:  1.83s | Throughput:  55.7 tok/s | Words:  79 (medium)
+  Describe the MVC (Model-View-Controller) design pa | Time:  1.76s | Throughput:  57.9 tok/s | Words:  79 (medium)
+  Explain the concept of microservices architecture. | Time:  1.91s | Throughput:  56.4 tok/s | Words:  83 (medium)
+  Describe how version control systems like Git work | Time:  1.77s | Throughput:  64.0 tok/s | Words:  87 (medium)
+  Explain the principles of object-oriented programm | Time:  1.77s | Throughput:  59.4 tok/s | Words:  81 (medium)
+  Describe the difference between relational and non | Time:  1.76s | Throughput:  56.7 tok/s | Words:  77 (medium)
+
+REASONING:
+  If you have 100 books and you read 3 books per wee | Time:  1.79s | Throughput:  49.3 tok/s | Words:  68 (medium)
+  A train leaves Station A at 2 PM traveling at 60 m | Time:  1.89s | Throughput:  55.1 tok/s | Words:  80 (medium)
+  You have a 3-gallon jug and a 5-gallon jug. How ca | Time:  1.77s | Throughput:  46.4 tok/s | Words:  64 (medium)
+  If all roses are flowers, and some flowers are red | Time:  1.77s | Throughput:  55.0 tok/s | Words:  76 (medium)
+  In a group of 30 people, everyone shakes hands exa | Time:  1.86s | Throughput:  49.3 tok/s | Words:  70 (medium)
+  If it takes 5 machines 5 minutes to make 5 widgets | Time:  1.84s | Throughput:  49.5 tok/s | Words:  70 (medium)
+  You have 12 balls, one of which is heavier than th | Time:  1.94s | Throughput:  48.8 tok/s | Words:  73 (medium)
+  If a shirt costs $20 after a 20% discount, what wa | Time:  1.76s | Throughput:  55.3 tok/s | Words:  75 (medium)
+
+
+✓ Evaluation completed! Results saved to categorized_single_gpu_evaluation_1751505964.json
+
+Quick Summary by Category:
+  short_text: 10 prompts, 1.64s avg, 73 words avg
+  long_text: 8 prompts, 1.81s avg, 78 words avg
+  creative: 8 prompts, 1.81s avg, 74 words avg
+  technical: 8 prompts, 1.80s avg, 81 words avg
+  reasoning: 8 prompts, 1.83s avg, 72 words avg
